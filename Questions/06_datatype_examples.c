@@ -4,7 +4,7 @@ int main() {
     long int phone = 5678464;
     printf("Long int : %ld\n", phone);   // use %ld for long int
 
-    char ch = 'a';  // ✅ single quotes for char
+    char ch = 'a';  // single quotes for char
     printf("Char value : %c\n", ch);
 
     char str[] = "Pawan Maurya"; // string = array of characters
