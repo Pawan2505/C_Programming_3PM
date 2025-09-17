@@ -243,3 +243,193 @@
 //     printf("Size of NAME is : %d\n", sizeof(NAME));
 //     printf("The value of PI : %0.2f\n", PI);
 // }
+
+
+// #include<stdio.h>
+
+// int main(){
+//    const int num = 10;
+// //    num = 10; // not ok
+
+//     // num = 50;
+
+//     printf("The value of num : %d\n", num);
+// }
+
+
+// #include<stdio.h>
+// #define PI 3.14
+// int main(){
+//     // PI = 34; // not ok
+//     printf("PI : %0.2f",PI);
+// }
+
+
+// scanf() : It is used to take input from user. It is a function of stdio.h library. It is used to read formatted input from standard input (keyboard). It is used to read data of various types like int, float, char, string etc.
+// syntax : scanf("format specifier",&variable_name);
+// & -> address of operator -> it is used to get the address of a variable. It is used to store the input value at the address of the variable. It is used to pass the address of the variable to the scanf() function.
+
+
+// #include<stdio.h>
+
+// int main(){
+//     int marks; // variable declaration
+//     printf("Please enter your marks : ");
+//     scanf("%d",&marks); // user se input
+
+//     printf("Your marks is : %d",marks);
+// }
+
+// #include<stdio.h>
+
+// int main(){
+//     float num1;
+//     float num2;
+
+//     printf("Please enter num1 : ");
+//     scanf("%f",&num1);
+
+//     printf("Please enter num2 : ");
+//     scanf("%f",&num2);
+
+//     printf("Sum of num1 and num2 is : %0.2f",num1+num2);
+
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+   
+//     char ch;
+
+//     printf("Enter char value : ");
+
+//     scanf("%c",&ch);
+
+//     printf("The value of ch is : %c",ch);
+
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+   
+//     char username[15];
+
+//     printf("Enter username : ");
+
+//     scanf("%[^\n]s",&username);
+
+//     printf("The username is : %s",username);
+
+// }
+
+
+// String input in c : https://www.geeksforgeeks.org/c/taking-string-input-space-c-3-different-methods/
+
+
+
+// #include<stdio.h>
+
+// int main(){
+   
+//     char username[15];
+
+//     printf("Enter username : ");
+
+//     gets(username);  // user input
+
+//     printf("The username is : %s",username);
+
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+   
+//     char username[15];
+
+//     printf("Enter username : ");
+
+//     gets(username);  // user input
+
+//     // printf("The username is : %s",username);
+
+//     puts(username);
+
+// }
+
+
+// Operator & Expression  
+
+// Token : https://www.geeksforgeeks.org/c/tokens-in-c/
+
+// a + b  -> +-> operator , a,b -> oprands
+
+// int sum = a + b;
+
+// 1. uniary operator -> 
+
+// a++ -> post increment -> phle use hoga baad me increase hoga.
+//++a -> pre increment -> phle increase hoga fir use hoga
+
+// a-- -> post decrement -> phle use hoga baad me decrement hoga
+// --a -> pre decrement -> phle decrese hoga baad me use hoga
+
+
+// #include<stdio.h>
+// int main(){
+//     int a = 10;
+//     printf("The value of a is : %d\n",a);
+// }
+
+// #include<stdio.h>
+// int main(){
+//     int a = 10;
+
+//     printf("The value of a is : %d\n",a++); // 10
+//     printf("The value of a is : %d\n",a++); // 11
+
+//     printf("The value of a is : %d\n",++a); // 13
+// }
+
+
+// #include<stdio.h>
+// int main(){
+//     int a = 10;
+
+//     printf("The value of a is : %d\n",--a); // 9
+//     printf("The value of a is : %d\n",a++); // 9
+//     printf("The value of a is : %d\n",--a); // 9
+// }
+
+
+
+// Arithmetic : +,-,/,*,%
+
+// #include<stdio.h>
+
+// int main(){
+//     int x = 100;
+//     int y = 20;
+
+//     printf("%d\n",x+y); //120
+//     printf("%d\n",x-y); //80
+//     printf("%d\n",x*y); //2000
+//     printf("%d\n",x/y); //5
+//     printf("%d\n",x%y); //0
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+//     int x = 20;
+//     int y = 100;
+
+//     printf("%d\n",x%y);
+// }
+
