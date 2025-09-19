@@ -433,3 +433,178 @@
 //     printf("%d\n",x%y);
 // }
 
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int x = 20;
+
+//     int y = 100;
+
+//     printf("The value of remainder is : %d",x%y);
+
+//     // jab bhee small number ko largest number se divide krte ho to remainder small number hota hai.
+// }
+
+//  int a = 30;
+
+// Relational operator : > , <, == ,!=, >=, <=
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = 100;
+//     int num2 = 86;
+
+//     printf("%d\n",(num1<num2)); // 0
+//     printf("%d\n",(num1>num2)); // 1
+//     printf("%d\n",(num1>=num2)); // 1
+//     printf("%d\n",(num1<=num2)); // 0
+//     printf("%d\n",(num1==num2)); // 0
+//     printf("%d\n",(num1!=num2)); // 1
+
+// }
+
+// Logical Operator : && (Logical AND), || (Logical OR), ! (Logical NOT)
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = 100;
+//     int num2 = 86;
+
+//     printf("%d\n",(num1<num2)&& (num1>num2)); // 0
+//     printf("%d\n",(num1>num2) && (num1>=num2)); // 1
+//     printf("%d\n",(num1>=num2) && (num1<=num2)); // 0
+//     printf("%d\n",(num1<=num2) && (num1==num2)); // 0
+//     printf("%d\n",(num1==num2) && (num1!=num2)); // 0
+//     printf("%d\n",(num1!=num2) && (num1>=num2)); // 1
+
+// }
+
+// Method 1 :
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int x = 10;
+//     int y = 20;
+
+//     int temp;
+//     printf("Temp : %d\n",temp);
+    
+//     temp = x;
+//     x = y;
+//     y = temp;
+    
+    
+//     printf("The value of x : %d\n",x);
+//     printf("The value of y : %d\n",y);
+//     printf("Temp value : %d\n",temp);
+// }
+
+// Method 2 : swap two without using third variable
+
+// #include<stdio.h>
+
+// int main(){
+//     int x = 10;
+//     int y = 20;
+
+
+//     x = x+y; // 30
+//     y = x-y; // 30-20 = 10;
+//     x = x-y; // 30-10 = 20
+
+//     printf("The value of x : %d\n",x);
+//     printf("The value of y : %d\n",y);
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+//     int x;
+//     printf("Enter value of x : ");
+//     scanf("%d",&x);
+//     int y;
+//     printf("Enter value of y : ");
+//     scanf("%d",&y);
+
+
+//     x = x+y; // 30
+//     y = x-y; // 30-20 = 10;
+//     x = x-y; // 30-10 = 20
+
+//     printf("The value of x : %d\n",x);
+//     printf("The value of y : %d\n",y);
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = 100;
+//     int num2 = 86;
+
+//     printf("%d\n",(num1<num2) || (num1>num2)); // 1
+//     printf("%d\n",(num1>num2)  || (num1>=num2)); // 1
+//     printf("%d\n",(num1>=num2)  || (num1<=num2)); // 1
+//     printf("%d\n",(num1<=num2)  || (num1==num2)); // 0
+//     printf("%d\n",(num1==num2)  || (num1!=num2)); // 1
+//     printf("%d\n",(num1!=num2)  || (num1>=num2)); // 1
+
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = 100;
+//     int num2 = 86;
+
+//     printf("%d\n",!((num1<num2) || (num1>num2))); //0 
+//     printf("%d\n",!((num1>num2)  && (num1>=num2))); // 0
+//     printf("%d\n",!((num1>=num2)  || (num1<=num2))); // 0
+//     printf("%d\n",!((num1<=num2)  && (num1==num2))); // 1
+//     printf("%d\n",!((num1==num2)  || (num1!=num2))); // 0
+//     printf("%d\n",!((num1!=num2)  || (num1>=num2))); // 0
+
+// }
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = 100;
+//     int num2 = 86;
+
+//     printf("%d\n",!((num1<num2) || (num1>num2))); //0 
+//     printf("%d\n",!((num1>num2)  && (num1>=num2))); // 0
+//     printf("%d\n",!((num1>=num2)  || (num1<=num2))); // 0
+//     printf("%d\n",!((num1<=num2)  && (num1==num2))); // 1
+//     printf("%d\n",!((num1==num2)  || (num1!=num2))); // 0
+//     printf("%d\n",!((num1!=num2)  || (num1>=num2))); // 0
+
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = 10;
+//     int num2 = 5;
+
+//     printf(" 10 and 5 bitwise AND : %d",num1|num2);
+// }
+
+
