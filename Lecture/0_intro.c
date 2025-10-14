@@ -604,7 +604,293 @@
 //     int num1 = 10;
 //     int num2 = 5;
 
-//     printf(" 10 and 5 bitwise AND : %d",num1|num2);
+//     printf(" 10 and 5 bitwise OR : %d",num1|num2);
 // }
 
 
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = 10;
+//     int num2 = 5;
+
+//     printf(" 10 and 5 bitwise XOR : %d",num1^num2);
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = 10;
+
+//     printf(" 10 and 5 bitwise left shift : %d",num1<<2);
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = 10;
+
+//     printf(" 10 and 5 bitwise right shift : %d",num1>>2);
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = -10;
+
+//     printf(" 10 and 5 bitwise NOT : %d",~num1);
+// }
+
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = 100;
+
+//     num1 = num1 + 50;
+
+//     num1 += 50;
+
+//     printf("The value of num1 : %d",num1); // 200
+
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num1 = 100;
+
+//     num1 %= 50;
+
+//     printf("The value of num1 : %d",num1); // 0
+
+// }
+
+
+
+// Ternary -> (condition)?statement1 : statement2
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int age = 4;
+//     (age>=18)?printf("You are eligible to vote!"):printf("You are not eligible to vote!");
+// }
+
+
+// Type casting
+
+// #include<stdio.h>
+
+// int main(){
+
+//     int num = (int)20.9;
+
+//     float x = 50.69;
+
+//     printf("Num is : %d\n",num);
+//     printf("X is : %0.3f\n",x);
+// }
+
+// #include<stdio.h>
+// #include<stdlib.h>
+
+// int main(){
+
+//     int num = -56;
+
+//     int value = abs(num);
+
+//     printf("Num is : %d\n",value);
+
+// }
+
+
+
+// #include<stdio.h>
+
+// int main(){
+//     int x = 7;
+
+//     // char ch = (char)x;  // not ok
+
+//     // printf("ch : %c",ch);
+// }
+
+// Control Stracture
+
+
+// #include<stdio.h>
+
+// int main(){
+
+// int age;
+
+// printf("Enter age : ");
+
+// scanf("%d",&age);
+
+// if(age>=18){
+//     printf("You are eligible to vote!");
+// }else{  
+//     printf("You are not eligible to vote!");
+// }
+
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+
+// int age;
+
+// printf("Enter age : ");
+
+// scanf("%d",&age);
+
+// if(age>=18){
+//     printf("You are eligible to vote!");
+// }
+
+// if(age>=18){
+//     printf("You can watch movie or web series!");
+// }
+
+// }
+
+
+// Grade calculater
+
+// #include<stdio.h>
+
+// int main(){
+
+//     float marks;
+
+//     printf("Enter Marks : ");
+
+//     scanf("%f",&marks);
+
+//     if(marks>=90){
+//         printf("Grade A");
+//     }else if(marks>=80){
+//          printf("Grade B");
+//     }else if(marks>=70){
+//         printf("Grade C");
+//     }else{
+//         printf("Sorry, You are rejected!");
+//     }
+// }
+
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//     float marks;
+
+//     printf("Enter Marks : ");
+
+//     scanf("%f",&marks);
+
+//     if(marks>=80){
+//        if(marks>=90){
+//         printf("Grade A");
+//        }else{
+//         printf("Grade B");
+//        }
+//     }else{
+//         printf("Sorry, You are rejected!");
+//     }
+// }
+
+
+// #include<stdio.h>
+
+// int main(){
+//     int x = 50;
+//     int y = 40;
+//     int z = 102;
+
+//     (x<y && x<z)?printf("X is smallest!"):(y<x && y<z)?printf("Y is smallest!"):printf("Z is smallest!");
+// }
+
+
+// Switch Case
+
+
+// #include<stdio.h>
+
+// int main(){
+
+//         int x,y;
+//         char ops;
+//         printf("Enter value: ");
+
+//         scanf("%d %c %d",&x,&ops,&y);
+
+//         switch(ops){
+//             case '+':
+//                 printf("Add : %d",x+y);
+//                 break;
+//             case '-':
+//                 printf("Sub : %d",x-y);
+//             case '*':
+//                 printf("Mul : %d",x*y);
+//                 break;
+//             case '/':
+//                 printf("Div : %d",x/y);
+//                 break;
+//             case '%':
+//                 printf("Rem : %d",x%y);
+//                 break;
+//             default:
+//                 printf("Please enter correct ops!");
+//         }
+// }
+
+
+
+#include<stdio.h>
+
+int main(){
+
+        int x,y;
+        char ops;
+        printf("Enter value: ");
+
+        scanf("%d %c %d",&x,&ops,&y);
+
+        switch(ops){
+            case '+':
+                printf("Add : %d",x+y);
+                break;
+            case '-':
+                printf("Sub : %d",x-y);
+            case '*':
+                printf("Mul : %d",x*y);
+                break;
+            case '/':
+                printf("Div : %d",x/y);
+                break;
+            case '%':
+                printf("Rem : %d",x%y);
+                break;
+            default:
+                printf("Please enter correct ops!");
+        }
+}
