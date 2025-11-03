@@ -722,3 +722,113 @@
    
 // }
 
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main(){
+//     int a = 20;
+
+//     int *ptr = &a;
+
+//     *ptr = 50;
+
+//     cout<<"Value of a : "<<a<<endl;
+//     cout<<"Value of *ptr : "<<*ptr<<endl;
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main(){
+//     int a = 20;
+
+//     int *ptr = &a;
+
+//     *ptr = 50;
+
+//     cout<<"Value of a : "<<a<<endl;
+//     cout<<"Value of *ptr : "<<*ptr<<endl;
+
+//     cout<<"Address of a and ptr"<<endl;
+
+//     cout<<"Value of a : "<<&a<<endl;
+//     cout<<"Value of *ptr : "<<ptr<<endl;
+// }
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main(){
+//     int arr[5] = {10,20,30,40,50};
+//     int *ptr[5];
+
+//     for(int i = 0; i <5; i++){
+//         ptr[i] = &arr[i];
+//     }
+//     for(int i = 0; i <5; i++){
+//         cout<<*ptr[i]<<endl;
+//     }
+//     cout<<"arr address : "<<endl;
+//     for(int i = 0; i <5; i++){
+//         cout<<&arr[i]<<endl;
+//     }
+//     cout<<"ptr store address : "<<endl;
+//     for(int i = 0; i <5; i++){
+//         cout<<ptr[i]<<endl;
+//     }
+ 
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int x = 10;
+
+//     cout<<x<<endl;
+//     cout<<&x<<endl;
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int x = 10;
+//     int *ptr = &x;
+//     cout<<x<<endl;
+//     cout<<&x<<endl;
+
+//     cout<<"Pointer Concept : "<<endl;
+
+//     cout<<"ptr : "<<ptr<<endl;
+//     cout<<"*ptr : "<<*ptr<<endl;
+// }
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int x = 10;          
+    int *ptr1 = &x;       
+    cout<<x<<endl;       
+    cout<<&x<<endl;       
+    cout<<"Pointer Concept : "<<endl;
+
+    cout<<"ptr1 : "<<ptr1<<endl;   
+    cout<<"*ptr1 : "<<*ptr1<<endl; 
+    int **ptr2 = &ptr1;     
+    cout<<"&ptr1 : "<<&ptr1<<endl;
+    cout<<"ptr2 : "<<ptr2<<endl;   
+    cout<<"*ptr2 : "<<*ptr2<<endl;  
+    cout<<"**ptr2 : "<<**ptr2<<endl;
+    cout<<"&ptr2 : "<<&ptr2<<endl;
+}

@@ -865,32 +865,34 @@
 
 
 
-#include<stdio.h>
+// #include<stdio.h>
 
-int main(){
+// int main(){
 
-        int x,y;
-        char ops;
-        printf("Enter value: ");
+//         int x,y;
+//         char ops;
+//         printf("Enter value: ");
 
-        scanf("%d %c %d",&x,&ops,&y);
+//         scanf("%d %c %d",&x,&ops,&y);
 
-        switch(ops){
-            case '+':
-                printf("Add : %d",x+y);
-                break;
-            case '-':
-                printf("Sub : %d",x-y);
-            case '*':
-                printf("Mul : %d",x*y);
-                break;
-            case '/':
-                printf("Div : %d",x/y);
-                break;
-            case '%':
-                printf("Rem : %d",x%y);
-                break;
-            default:
-                printf("Please enter correct ops!");
-        }
-}
+//         switch(ops){
+//             case '+':
+//                 printf("Add : %d",x+y);
+//                 break;
+//             case '-':
+//                 printf("Sub : %d",x-y);
+//             case '*':
+//                 printf("Mul : %d",x*y);
+//                 break;
+//             case '/':
+//                 printf("Div : %d",x/y);
+//                 break;
+//             case '%':
+//                 printf("Rem : %d",x%y);
+//                 break;
+//             default:
+//                 printf("Please enter correct ops!");
+//         }
+// }
+
+
