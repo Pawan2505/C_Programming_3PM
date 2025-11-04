@@ -298,8 +298,6 @@
 //     cout << "Sum of first and last number is : " << result << endl;
 // }
 
-
-
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -321,8 +319,6 @@
 //     }
 //     cout << "Sum of middle number is : " << sum << endl;
 // }
-
-
 
 // #include<iostream>
 // using namespace std;
@@ -352,7 +348,6 @@
 //     }
 // }
 
-
 // #include<iostream>
 // using namespace std;
 
@@ -373,7 +368,6 @@
 //     }
 // }
 
-
 // #include<iostream>
 
 // using namespace std;
@@ -388,7 +382,6 @@
 //     cout<<arr[4]<<" ";
 //     cout<<arr[5]<<" ";
 // }
-
 
 // #include<iostream>
 
@@ -406,7 +399,6 @@
 //     cout<<arr[4]<<" ";
 //     cout<<arr[5]<<" ";
 // }
-
 
 // #include<iostream>
 
@@ -429,8 +421,6 @@
 //     cout<<arr[4]<<" ";
 //     cout<<arr[5]<<" ";
 // }
-
-
 
 // #include<iostream>
 
@@ -459,9 +449,8 @@
 
 //     cout<<sizeof(arr)<<endl;
 //     cout<<sizeof(arr)/sizeof(arr[0])<<endl;
-    
-// }
 
+// }
 
 // #include<iostream>
 
@@ -473,9 +462,8 @@
 
 //     cout<<sizeof(arr)<<endl;
 //     cout<<sizeof(arr)/sizeof(arr[3])<<endl;
-    
-// }
 
+// }
 
 // #include<iostream>
 
@@ -490,7 +478,7 @@
 //     for(int i =0; i<length;i++){
 //         cout<<arr[i]<<" ";
 //     }
-    
+
 // }
 
 // searching operation
@@ -510,8 +498,8 @@
 //             cout<<i;
 //             break;
 //         }
-       
-//     }  
+
+//     }
 // }
 
 // #include<iostream>
@@ -530,13 +518,12 @@
 //             arr[i] = update;
 //             break;
 //         }*-
-//     }  
+//     }
 
 //     for(int i = 0; i <length; i++){
 //         cout<<arr[i]<<" ";
 //     }
 // }
-
 
 // #include<iostream>
 
@@ -557,22 +544,21 @@
 
 //         for(int col = 0; col<col_size; col++){
 //             cout<<"Enter element at "<<row<<" row and "<<col<<" col : ";
-//             cin>>arr[row][col]; 
+//             cin>>arr[row][col];
 //         }
 //     }
 
 //     cout<<"2D array is : "<<endl;
-    
+
 //     for(int row = 0; row<row_size; row++){
 
 //         for(int col = 0; col<col_size; col++){
-           
-//             cout<<arr[row][col]<<" "; 
+
+//             cout<<arr[row][col]<<" ";
 //         }
 //         cout<<endl;
 //     }
 // }
-
 
 // Function :
 
@@ -594,8 +580,6 @@
 //     // functipon call or invoke function
 // addition(10,20); // 10,20 -> argument
 // }
-
-
 
 // 1. Take something and return something
 
@@ -629,11 +613,10 @@
 // }
 
 // int main(){
-    
-//     addition(10,200); 
-   
-// }
 
+//     addition(10,200);
+
+// }
 
 // 3. Take nothing and return nothing
 
@@ -648,21 +631,19 @@
 // }
 
 // int main(){
-    
-//     addition(); 
-   
+
+//     addition();
+
 // }
-
-
 
 // #include<iostream>
 
 // using namespace std;
 
 // int main(){
-    
+
 //     addition(); //  'addition' was not declared in this scope
-   
+
 // }
 
 // int addition(){
@@ -670,17 +651,15 @@
 //     int y = 30;
 //     cout<<"The sum of "<<x<<" and "<<y<<" is : "<<x+y<<endl;
 // }
-
-
 
 // #include<iostream>
 
 // using namespace std;
 // int addition();
 // int main(){
-    
-//     addition(); 
-   
+
+//     addition();
+
 // }
 
 // int addition(){
@@ -689,17 +668,16 @@
 //     cout<<"The sum of "<<x<<" and "<<y<<" is : "<<x+y<<endl;
 // }
 
-
-//4. Take nothing and return something
+// 4. Take nothing and return something
 
 // #include<iostream>
 
 // using namespace std;
 // int addition(); // function declaration
 // int main(){
-    
+
 //     cout<<"Sum of both number : "<<addition()<<endl; // function invoke
-   
+
 // }
 
 // int addition(){ // function definition
@@ -711,18 +689,16 @@
 // #include<iostream>
 
 // using namespace std;
-// int addition(){ 
+// int addition(){
 //     int x = 20;
 //     int y = 300;
 //     return x+y;
 // }
 // int main(){
-    
-//     cout<<"Sum of both number : "<<addition()<<endl; 
-   
+
+//     cout<<"Sum of both number : "<<addition()<<endl;
+
 // }
-
-
 
 // #include<iostream>
 
@@ -759,8 +735,6 @@
 //     cout<<"Value of *ptr : "<<ptr<<endl;
 // }
 
-
-
 // #include<iostream>
 
 // using namespace std;
@@ -783,9 +757,8 @@
 //     for(int i = 0; i <5; i++){
 //         cout<<ptr[i]<<endl;
 //     }
- 
-// }
 
+// }
 
 // #include<iostream>
 // using namespace std;
@@ -812,23 +785,138 @@
 //     cout<<"*ptr : "<<*ptr<<endl;
 // }
 
+// #include<iostream>
+// using namespace std;
 
-#include<iostream>
-using namespace std;
+// int main(){
+//     int x = 10;
+//     int *ptr1 = &x;
+//     cout<<x<<endl;
+//     cout<<&x<<endl;
+//     cout<<"Pointer Concept : "<<endl;
 
-int main(){
-    int x = 10;          
-    int *ptr1 = &x;       
-    cout<<x<<endl;       
-    cout<<&x<<endl;       
-    cout<<"Pointer Concept : "<<endl;
+//     cout<<"ptr1 : "<<ptr1<<endl;
+//     cout<<"*ptr1 : "<<*ptr1<<endl;
+//     int **ptr2 = &ptr1;
+//     cout<<"&ptr1 : "<<&ptr1<<endl;
+//     cout<<"ptr2 : "<<ptr2<<endl;
+//     cout<<"*ptr2 : "<<*ptr2<<endl;
+//     cout<<"**ptr2 : "<<**ptr2<<endl;
+//     cout<<"&ptr2 : "<<&ptr2<<endl;
+// }
 
-    cout<<"ptr1 : "<<ptr1<<endl;   
-    cout<<"*ptr1 : "<<*ptr1<<endl; 
-    int **ptr2 = &ptr1;     
-    cout<<"&ptr1 : "<<&ptr1<<endl;
-    cout<<"ptr2 : "<<ptr2<<endl;   
-    cout<<"*ptr2 : "<<*ptr2<<endl;  
-    cout<<"**ptr2 : "<<**ptr2<<endl;
-    cout<<"&ptr2 : "<<&ptr2<<endl;
-}
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int arr[5] = {12,34,56,7,8};
+
+//     cout<<&arr<<endl;
+//     cout<<&arr[0]<<endl;
+//     cout<<&arr[1]<<endl;
+//     cout<<&arr[2]<<endl;
+//     cout<<&arr[3]<<endl;
+//     cout<<&arr[4]<<endl;
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int arr[5] = {12,34,56,7,8};
+
+//     for(int i = 0; i <5; i++){
+//         cout<<&arr[i]<<endl;
+//     }
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int arr[5] = {12,34,56,7,8};
+
+//     for(int i = 0; i <5; i++){
+//         cout<<&arr[i]<<endl;
+//     }
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int arr[5] = {12,34,56,7,8};
+
+//     cout<<arr<<endl;
+//     cout<<&arr<<endl;
+
+//     int *ptr = arr;
+
+//     for(int i = 0; i<5; i++){
+//         cout<<i<<" index address : "<<(ptr+i)<<endl;
+//     }
+
+//     for(int i = 0; i<5; i++){
+//         cout<<i<<" index value : "<<*(ptr+i)<<endl;
+//     }
+
+// }
+
+// call by value
+
+// #include<iostream>
+// using namespace std;
+
+// void display(int x){
+//     cout<<"The value of x : "<<x<<endl;
+// }
+
+// int main(){
+// int a = 10;
+// display(a);
+
+// }
+
+// call by reference
+
+// #include <iostream>
+// using namespace std;
+
+// void display(int &x)
+// {
+//     cout << "The value of x : " << x << endl;
+//     ++x;
+//     cout << "The value of x : " << x << endl;
+// }
+
+// int main()
+// {
+//     int a = 10;
+//     cout << "The value of a : " << a << endl;
+//     display(a);
+
+//     cout << "The value of a : " << a << endl;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// void display(int x)
+// {
+//     cout << "The value of x : " << x << endl;
+//     ++x;
+//     cout << "The value of x : " << x << endl;
+// }
+
+// int main()
+// {
+//     int a = 10;
+//     cout << "The value of a : " << a << endl;
+//     display(a);
+
+//     cout << "The value of a : " << a << endl;
+// }
