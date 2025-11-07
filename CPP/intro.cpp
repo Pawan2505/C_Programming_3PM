@@ -920,3 +920,162 @@
 
 //     cout << "The value of a : " << a << endl;
 // }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// // create class
+
+// class Student{
+
+// };
+
+// int main(){
+
+// Student ashish;  // create object
+
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// // create class
+
+// class Student{
+
+//     // member function
+// public : // we can access from anywhere
+//     void display(){
+//         cout<<"Hello Student!"<<endl;
+//     }
+
+//     int details(){
+//         cout<<"Noice very high!"<<endl;
+//     }
+
+// };
+
+// int main(){
+
+// Student ashish;  // create object
+
+// // display(); // not ok
+
+// ashish.display();  // ok
+// ashish.details(); 
+
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// // create class
+
+// class Student{
+
+//     // member function
+// public : // we can access from anywhere
+//     void display(){
+//         cout<<"Hello Student!"<<endl;
+//     }
+
+//     int details(){
+//         cout<<"Noice very high!"<<endl;
+//     }
+
+// };
+
+// int main(){
+
+// Student ashish;  // create object
+
+// // display(); // not ok
+
+// ashish.display();  // ok
+// ashish.details(); 
+
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// // create class
+
+// class Student{
+
+//     private:
+
+//     string name;
+//     int age;
+
+//     // member function
+// public : // we can access from anywhere
+//     void display(){
+//         cout<<"Hello Student!"<<endl;
+//     }
+
+//     int details(){
+//         cout<<"Noice very high!"<<endl;
+//     }
+
+// };
+
+// int main(){
+
+// Student ashish;  // create object
+
+// // display(); // not ok
+
+// ashish.display();  // ok
+// ashish.details(); 
+
+// ashish.name = "AShu"; // not ok
+// ashish.age = 14; // not ok
+
+// }
+
+#include<iostream>
+
+using namespace std;
+
+// create class
+
+class Student{
+
+   public : // we can access from anywhere
+
+   // Data member
+    string name;
+    int age;
+
+    // member function
+    void display(){
+        cout<<"Name : "<<name<<endl;
+        cout<<"Age : "<<age<<endl;
+    }
+
+    int details(){
+        cout<<"Noice very high!"<<endl;
+    }
+
+};
+
+int main(){
+
+Student ashish;  // create object
+
+// display(); // not ok
+
+ashish.name = "AShu"; // ok
+ashish.age = 14; // ok
+
+ashish.display();  // ok
+ashish.details(); 
+
+}
