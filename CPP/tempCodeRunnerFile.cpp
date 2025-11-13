@@ -1,0 +1,1 @@
+dent obj1("Ashish",20);

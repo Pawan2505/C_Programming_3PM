@@ -1040,42 +1040,409 @@
 
 // }
 
+// #include<iostream>
+
+// using namespace std;
+
+// // create class
+
+// class Student{
+
+//    public : // we can access from anywhere
+
+//    // Data member
+//     string name;
+//     int age;
+
+//     // member function
+//     void display(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//     }
+
+//     int details(){
+//         cout<<"Noice very high!"<<endl;
+//     }
+
+// };
+
+// int main(){
+
+// Student ashish;  // create object
+
+// // display(); // not ok
+
+// ashish.name = "AShu"; // ok
+// ashish.age = 14; // ok
+
+// ashish.display();  // ok
+// ashish.details(); 
+
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+
+//    private : 
+
+//    // Data member
+//     string name;
+//     int age;
+
+//     public :
+
+//     // setter method
+//     int setDetails(string name, int age){
+//         this->name = name;
+//         this->age = age;
+//     }
+
+//     // getter method
+//     int getdetails(){
+//        cout<<"Name : "<<name<<endl;
+//        cout<<"Age : "<<age<<endl;
+//     }
+
+// };
+
+// int main(){
+
+// Student s1,s2;
+// // s1.name = "Pawan"; // not ok
+// // cout<<s1.name<<endl;  // not ok
+// s1.setDetails("Ansu",15);
+
+// s1.getdetails();
+
+// s2.setDetails("Nichiket",20);
+
+// s2.getdetails();
+
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+
+//    private : 
+
+//    // Data member
+//     string name;
+//     int age;
+
+//     public :
+
+//     // setter method
+//     int setDetails(string name1, int age1){
+//         name = name1;
+//         age = age1;
+//     }
+
+//     // getter method
+//     int getdetails(){
+//        cout<<"Name : "<<name<<endl;
+//        cout<<"Age : "<<age<<endl;
+//     }
+
+// };
+
+// int main(){
+
+// Student *s1 = new Student();
+
+// // s1.setDetails("Maharishi",18); // Not ok
+// s1->setDetails("Maharishi",18); // use ->
+
+// s1->getdetails();
+// }
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+
+//    private : 
+
+//    // Data member
+//     string *name;
+//     int age;
+
+//     public :
+
+//     // setter method
+//     int setDetails(string name1, int age1){
+//         name = new string;
+//         *name = name1;
+//         // cout<<name<<endl;
+//         age = age1;
+//     }
+
+//     // getter method
+//     int getdetails(){
+//        cout<<"Name : "<<*name<<endl;
+//        cout<<"Age : "<<age<<endl;
+//     }
+
+// };
+
+// int main(){
+
+// Student *s1 = new Student();
+
+// // s1.setDetails("Maharishi",18); // Not ok
+// s1->setDetails("Maharishi",18); // use ->
+
+// s1->getdetails();
+// }
+
+
+
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+
+//    private : 
+
+//    // Data member
+//     string *name;
+//     int age;
+
+//     public :
+
+//     // setter method
+//     int setDetails(string name1, int age1){
+//         name = new string;
+//         *name = name1;
+//         // cout<<name<<endl;
+//         age = age1;
+//     }
+
+//     // getter method
+//     int getdetails(){
+//        cout<<"Name : "<<*name<<endl;
+//        cout<<"Age : "<<age<<endl;
+//     }
+
+// };
+
+// int main(){
+
+// Student students[3];
+
+// students[0].setDetails("Viraj",21);
+// students[1].setDetails("Keval",22);
+// students[2].setDetails("Smit",23);
+
+// students[0].getdetails();
+// students[1].getdetails();
+// students[2].getdetails();
+
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// string name = "Disant"; // global variable
+
+// int main(){
+//     string name = "Romil"; // local variable
+
+//     cout<<name<<endl;  // Romil
+
+//     cout<<::name<<endl;  // Disant
+
+// }
+
+
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+
+//    private : 
+
+//    // Data member
+//     string *name; // instance level variable
+//     int age; // instance level variable
+//     static int marks; // class level variable
+
+//     public :
+
+//     // setter method
+//     int setDetails(string name1, int age1){
+//         name = new string;
+//         *name = name1;
+//         age = age1;
+//     }
+
+//     // getter method
+//     int getdetails(){
+//        cout<<"Name : "<<*name<<endl;
+//        cout<<"Age : "<<age<<endl;
+//        cout<<"marks : "<<marks<<endl;
+//     }
+
+// };
+
+// int Student::marks = 100;
+
+// int main(){
+
+// Student students[3];
+
+// students[0].setDetails("Viraj",21);
+// students[1].setDetails("Keval",22);
+// students[2].setDetails("Smit",23);
+
+// students[0].getdetails();
+// students[1].getdetails();
+// students[2].getdetails();
+
+// }
+
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+
+//    public : 
+
+//    // Data member
+//     string *name; // instance level variable
+//     int age; // instance level variable
+//     static int marks; // class level variable
+
+//     // setter method
+//     int setDetails(string name1, int age1){
+//         name = new string;
+//         *name = name1;
+//         age = age1;
+//     }
+
+//     // getter method
+//     int getdetails(){
+//        cout<<"Name : "<<*name<<endl;
+//        cout<<"Age : "<<age<<endl;
+//        cout<<"marks : "<<marks<<endl;
+//     }
+
+//    static void printStatic(){
+//         cout<<"Static memeber function!"<<endl;
+//     }
+
+// };
+
+// int Student::marks = 100;
+
+// int main(){
+
+// Student students[3];
+
+// students[0].setDetails("Viraj",21);
+// students[1].setDetails("Keval",22);
+// students[2].setDetails("Smit",23);
+
+// students[0].getdetails();
+// students[1].getdetails();
+// students[2].getdetails();
+
+// Student::printStatic();
+
+// cout<<Student::marks<<endl;
+
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+// public :
+//     // constructor
+//     Student(){
+//         cout<<"Hello Constructor!"<<endl;
+//     }
+
+// };
+
+// int main(){
+
+//     Student keval; // invoke constructor
+
+// }
+
+
+
 #include<iostream>
 
 using namespace std;
 
-// create class
-
 class Student{
+private :
 
-   public : // we can access from anywhere
+string name;
+int age;
 
-   // Data member
-    string name;
-    int age;
-
-    // member function
-    void display(){
-        cout<<"Name : "<<name<<endl;
-        cout<<"Age : "<<age<<endl;
+public :
+    // constructor -> parameterless constructor
+    Student(){
+        cout<<"Default Constructor!"<<endl;
+    }
+    Student(string name, int age){
+        cout<<"Parameter Constructor!"<<endl;
+        this->name = name;
+        this->age = age;
+    }
+    Student(const Student &obj){
+        cout<<"Copy Constructor!"<<endl;
+        this->name = obj.name;
+        this->age = obj.age;
     }
 
-    int details(){
-        cout<<"Noice very high!"<<endl;
+    void getDetails(){
+        cout<<"Name : "<<name<<endl;
+        cout<<"Age : "<<age<<endl;
     }
 
 };
 
 int main(){
 
-Student ashish;  // create object
+    Student obj1("Ashish",20); // invoke constructor
+    // Student jaydeep; // invoke constructor
 
-// display(); // not ok
+    
+    Student obj2 = obj1;
 
-ashish.name = "AShu"; // ok
-ashish.age = 14; // ok
-
-ashish.display();  // ok
-ashish.details(); 
+    Student obj3;
+    
+    obj2.getDetails();
+    obj1.getDetails();
 
 }
