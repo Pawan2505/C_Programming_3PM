@@ -1399,50 +1399,219 @@
 
 
 
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+// private :
+
+// string name;
+// int age;
+
+// public :
+//     // constructor -> parameterless constructor
+//     Student(){
+//         cout<<"Default Constructor!"<<endl;
+//     }
+//     Student(string name, int age){
+//         cout<<"Parameter Constructor!"<<endl;
+//         this->name = name;
+//         this->age = age;
+//     }
+//     Student(const Student &obj){
+//         cout<<"Copy Constructor!"<<endl;
+//         this->name = obj.name;
+//         this->age = obj.age;
+//     }
+
+//     void getDetails(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//     }
+
+// };
+
+// int main(){
+
+//     Student obj1("Ashish",20); // invoke constructor
+//     // Student jaydeep; // invoke constructor
+
+    
+//     Student obj2 = obj1;
+
+//     Student obj3;
+    
+//     obj2.getDetails();
+//     obj1.getDetails();
+
+// }
+
+// // shallow copy constructor
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+// private :
+
+// string name;
+// int age;
+// int marks;
+
+// public :
+//     // constructor -> parameterless constructor
+//     Student(){
+//         name = "Pawan";
+//         marks = 100;
+//         age = 25;
+//     }
+//     Student(string name, int age){
+//         cout<<"Parameter1 Constructor!"<<endl;
+//         this->name = name;
+//         this->age = age;
+//         this->marks = 100; 
+//     }
+//     Student(string name, int age, int marks){
+//         cout<<"Parameter2 Constructor!"<<endl;
+//         this->name = name;
+//         this->age = age;
+//         this->marks = marks;
+//     }
+//     Student(const Student &obj){
+//         cout<<"Copy Constructor!"<<endl;
+//         this->name = obj.name;
+//         this->age = obj.age;
+//         this->marks = obj.marks;
+//     }
+
+//     void getDetails(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+
+// };
+
+// int main(){
+
+//     Student obj1("Ashish",20); 
+
+
+    
+//     Student obj2 = obj1;
+
+
+    
+//     obj2.getDetails();
+
+
+// }
+
+
+
+// // deep copy constructor
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+// public :
+
+// string name;
+// int *age;
+
+
+// public :
+
+//     Student(string name, int age1){
+//         this->name = name;
+//         this->age = new int;
+//         *age = age1;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Name : "<<&name<<endl;
+//     }
+
+//     Student(const Student &obj){
+//         cout<<"Copy Constructor!"<<endl;
+//         this->name = obj.name;
+//         age = new int;
+//         *age = *obj.age;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Name : "<<&name<<endl;
+//     }
+
+//     void getDetails(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<*age<<endl;
+//     }
+
+// };
+
+// int main(){
+
+//     Student obj1("Ashish",20); 
+
+//     obj1.getDetails();
+
+//     cout<<"Copy constructor : "<<endl;
+    
+//     Student obj2 = obj1;
+
+//     obj2.getDetails();
+// }
+
+
+
+// deep copy constructor
+
 #include<iostream>
 
 using namespace std;
 
 class Student{
-private :
+public :
 
 string name;
-int age;
+int *age;
+
 
 public :
-    // constructor -> parameterless constructor
-    Student(){
-        cout<<"Default Constructor!"<<endl;
-    }
-    Student(string name, int age){
-        cout<<"Parameter Constructor!"<<endl;
+
+    Student(string name, int age1){
         this->name = name;
-        this->age = age;
+        this->age = new int;
+        *age = age1;
+        cout<<"Age : "<<age<<endl;
+        cout<<"Name : "<<&name<<endl;
     }
+
     Student(const Student &obj){
         cout<<"Copy Constructor!"<<endl;
         this->name = obj.name;
         this->age = obj.age;
+        cout<<"Age : "<<age<<endl;
+        cout<<"Name : "<<&name<<endl;
     }
 
     void getDetails(){
         cout<<"Name : "<<name<<endl;
-        cout<<"Age : "<<age<<endl;
+        cout<<"Age : "<<*age<<endl;
     }
 
 };
 
 int main(){
 
-    Student obj1("Ashish",20); // invoke constructor
-    // Student jaydeep; // invoke constructor
+    Student obj1("Ashish",20); 
 
+    obj1.getDetails();
+
+    cout<<"Copy constructor : "<<endl;
     
     Student obj2 = obj1;
 
-    Student obj3;
-    
     obj2.getDetails();
-    obj1.getDetails();
-
 }
