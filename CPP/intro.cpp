@@ -1565,53 +1565,605 @@
 
 
 
-// deep copy constructor
+// shallow copy constructor
 
-#include<iostream>
+// #include<iostream>
 
-using namespace std;
+// using namespace std;
 
-class Student{
-public :
+// class Student{
+// public :
 
-string name;
-int *age;
+// string name;
+// int *age;
 
 
-public :
+// public :
 
-    Student(string name, int age1){
-        this->name = name;
-        this->age = new int;
-        *age = age1;
-        cout<<"Age : "<<age<<endl;
-        cout<<"Name : "<<&name<<endl;
-    }
+//     Student(string name, int age1){
+//         this->name = name;
+//         this->age = new int;
+//         *age = age1;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Name : "<<&name<<endl;
+//     }
 
-    Student(const Student &obj){
-        cout<<"Copy Constructor!"<<endl;
-        this->name = obj.name;
-        this->age = obj.age;
-        cout<<"Age : "<<age<<endl;
-        cout<<"Name : "<<&name<<endl;
-    }
+//     Student(const Student &obj){
+//         cout<<"Copy Constructor!"<<endl;
+//         this->name = obj.name;
+//         this->age = obj.age;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Name : "<<&name<<endl;
+//     }
 
-    void getDetails(){
-        cout<<"Name : "<<name<<endl;
-        cout<<"Age : "<<*age<<endl;
-    }
+//     void getDetails(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<*age<<endl;
+//     }
 
-};
+// };
 
-int main(){
+// int main(){
 
-    Student obj1("Ashish",20); 
+//     Student obj1("Ashish",20); 
 
-    obj1.getDetails();
+//     obj1.getDetails();
 
-    cout<<"Copy constructor : "<<endl;
+//     cout<<"Copy constructor : "<<endl;
     
-    Student obj2 = obj1;
+//     Student obj2 = obj1;
 
-    obj2.getDetails();
-}
+//     obj2.getDetails();
+// }
+
+
+// Destructor : 
+// 1. it is same as constructor but it start with ~
+// 2. it is used to free the memory allocated to object that me manully allocated with help of new keyword
+// 3. it is automatically invoked when object goes out of scope
+// 4. it does not take any parameter and does not return anything
+// 5. if you don't create destructor compiler will create default destructor
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+// public :
+
+// string name;
+// int *age;
+
+
+// public :
+
+//     Student(string name, int age1){
+//         this->name = name;
+//         this->age = new int;
+//         *age = age1;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Name : "<<&name<<endl;
+//     }
+
+//     Student(const Student &obj){
+//         cout<<"Copy Constructor!"<<endl;
+//         this->name = obj.name;
+//         this->age = obj.age;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Name : "<<&name<<endl;
+//     }
+
+//     ~Student(){
+//         cout<<"Destructor called.."<<endl;
+//         delete age;
+//         cout<<"Age is main : "<<*age<<endl;
+//     }
+
+//     void getDetails(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<*age<<endl;
+//     }
+
+// };
+
+// int main(){
+
+//     Student obj1("Ashish",20); 
+
+//     obj1.getDetails();
+
+//     cout<<"Copy constructor : "<<endl;
+    
+//     Student obj2 = obj1;
+
+//     obj2.getDetails();
+
+   
+// }
+
+// // private -> public
+// #include<iostream>
+
+// using namespace std;
+
+// class Parent{
+//     public:
+// };
+
+// class Child : public Parent{
+
+// };
+
+// int main(){
+
+// }
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Parent{
+//     public:
+
+//     int display(){
+//         cout<<"Parent class!"<<endl;
+//     }
+// };
+
+// class Child : public Parent{
+
+// };
+
+// int main(){
+//     Parent p1;
+
+//     // p1.display();
+
+//     Child ch;
+
+//     ch.display();
+// }
+
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Parent{
+//     public:
+//     string name;
+//     int age;
+
+//     Parent(string name, int age){
+//         this->name = name;
+//         this->age = age;
+//     }
+
+//     int display(){
+//         cout<<"Parent class!"<<endl;
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//     }
+// };
+
+// class Child : public Parent{
+//     public:
+//     int marks;
+    
+//     Child(string name, int age , int marks):Parent(name,age){ 
+//         this->marks = marks;
+//     }
+
+//      int details(){
+//         cout<<"Base class!"<<endl;
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+
+// };
+
+// int main(){
+//     Parent p1("Manish",25);
+
+//     // p1.display();
+
+//     Child ch("Vivek",22,100);
+
+//     ch.details();
+//     ch.display();
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Parent{
+//     public:
+//     string name;
+//     int age;
+
+//     Parent(string name, int age){
+//         this->name = name;
+//         this->age = age;
+//     }
+
+//     int display(){
+//         cout<<"Parent class!"<<endl;
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//     }
+// };
+
+// class Child : public Parent{
+//     public:
+//     int marks;
+    
+//     Child(string name, int age , int marks):Parent(name,age){ 
+//         this->marks = marks;
+//     }
+
+//      int details(){
+//         cout<<"Base class!"<<endl;
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+
+// };
+
+// class SubChild: public Child{
+// public :
+
+// SubChild(string name,int age, int marks):Child(name, age,marks){}
+// };
+
+// int main(){
+//     Parent p1("Manish",25);
+
+//     // p1.display();
+
+//     Child ch("Vivek",22,100);
+
+//     // ch.details();
+//     // ch.display();
+
+//     SubChild sub("Aakash",26,99);
+
+//     sub.details();
+//     sub.display();
+// }
+
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Parent{
+//     public:
+//     string name;
+//     int age;
+
+//     Parent(string name, int age){
+//         this->name = name;
+//         this->age = age;
+//     }
+
+//     int display(){
+//         cout<<"Parent class!"<<endl;
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//     }
+// };
+
+// class ParentTwo{
+//     public:
+
+//     int id;
+
+//     ParentTwo(int id){
+//         this->id = id;
+//     }
+
+//     void viewDetails(){
+//         cout<<"Parent second..."<<endl;
+//     }
+// };
+
+// class Child : public Parent, public ParentTwo{
+//     public:
+//     int marks;
+    
+//     Child(string name, int age ,int marks,int id):Parent(name,age),ParentTwo(id){ 
+//         this->marks = marks;
+//     }
+
+//      int details(){
+//         cout<<"Child class!"<<endl;
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//         cout<<"Id : "<<id<<endl;
+//     }
+
+// };
+
+// int main(){
+//     Parent p1("Manish",25);
+
+//     // p1.display();
+
+//     Child ch("Vivek",22,100,01);
+
+//     ch.viewDetails();
+//     ch.display();
+//     ch.details();
+// }
+
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class A{
+//     public:
+//     string name;
+//     int age;
+
+//     // A(){
+
+//     // }
+
+//     A(string name, int age){
+//         this->name = name;
+//         this->age = age;
+//     }
+
+//     int display(){
+//         cout<<"A class!"<<endl;
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//     }
+// };
+
+// class B :virtual public A {
+//     public:
+
+//     int id;
+
+//     B(string name, int age, int id):A(name,age){
+//         this->id = id;
+//     }
+
+//     void viewDetails(){
+//         cout<<"B second..."<<endl;
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Id : "<<id<<endl;
+      
+//     }
+// };
+// class C :virtual public A {
+//     public:
+
+//     int marks;
+
+//     C(string name, int age, int marks):A(name, age){
+//         this->marks = marks;
+//     }
+
+//     void viewDeta(){
+//         cout<<"C Class..."<<endl;
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// class D : public B, public C{
+//     public:
+//     int salary;
+    
+//     D(string name, int age, int id, int marks, int salary):A(name,age),B(name,age,id),C(name, age, marks){
+//         cout<<"D constructor..."<<endl;
+//         this->salary = salary;
+//     }
+//     void dprint(){
+//         cout<<"D Class ..."<<endl;
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//         cout<<"Id : "<<id<<endl;
+//         cout<<"Salary : "<<salary<<endl;
+//     }
+
+// };
+
+// int main(){
+//     A a1("Manish",25);
+
+//     a1.display();
+
+//     B b1("Pawan",25,2);
+
+//     b1.viewDetails();
+
+//     C c1("Bhavin",22,100);
+//     c1.viewDeta();
+
+//     D d1("Pankaj",28,3,99,9999999);
+
+//     d1.dprint();
+
+//     cout<<"A member function..."<<endl;
+//     d1.display();
+// }
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+
+//     public :
+
+//     int data(int x, int y){
+//         cout<<"Method 1 : "<<endl;
+//         return x+y;
+//     }
+//     double data(double x, int y){
+//         cout<<"Method 2 : "<<endl;
+//         return x+y;
+//     }
+//     int data(int x, int y, int z){
+//         cout<<"Method 3 : "<<endl;
+//         return x+y+z;
+//     }
+// };
+
+// int main(){
+
+//     Student s1;
+
+//     cout<<"s1.data(10,20) :" <<s1.data(10,20)<<endl;
+//     cout<<"s1.data(10.5,20) :" <<s1.data(10.5,20)<<endl;
+//     cout<<"s1.data(10,20,30) :" <<s1.data(10,20,30)<<endl;
+
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+
+//     public :
+
+//     virtual int data(int x, int y){
+//         cout<<"Student class ... "<<endl;
+//         return x+y;
+//     }
+
+// };
+
+// class Stud : public Student{
+// public :
+//     int data(int x, int y)override{
+//         cout<<"Stud class ...."<<endl;
+//         return x+y;
+//     }
+// };
+
+// int main(){
+
+//     Student s1;
+
+
+//     Stud st;
+
+//   cout<<"  st.data(10,20) : "<< st.data(10,20)<<endl;
+
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// int draw(); // function declaration
+
+// int main(){
+//     draw(); // function call
+// }
+
+// int draw(){  // function definition
+//     cout<<"Hello Draw function!"<<endl;
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+
+//     public :
+
+//     virtual void add() = 0;
+
+//     int data(){
+//         cout<<"Data function call..."<<endl;
+//     }
+
+// };
+
+// class Stud : public Student{
+
+//         public :
+
+//         void add(){
+//             cout<<"add function call..."<<endl;
+//         }
+// };
+
+// int main(){
+
+// Stud *s1 = new Stud();
+
+// s1->add();
+// s1->data();
+
+// delete s1; 
+// }
+
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class Student{
+
+//     public :
+
+//     virtual void add() = 0;
+
+//     int data(){
+//         cout<<"Data function call..."<<endl;
+//     }
+
+// };
+
+
+// class Stud : public Student{
+
+//         public :
+
+//         void add(){
+//             cout<<"add function call..."<<endl;
+//         }
+// };
+
+// int main(){
+
+// Stud *s1 = new Stud();
+
+// s1->add();
+// s1->data();
+
+// delete s1; 
+// }

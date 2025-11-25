@@ -1,1 +1,1 @@
-dent obj1("Ashish",20);
+  delete age;
