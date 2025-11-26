@@ -2167,3 +2167,217 @@
 
 // delete s1; 
 // }
+
+
+// Way of inheritance 
+
+// // public -> public
+
+// #include<iostream>
+// using namespace std;
+
+// class A{
+//     public : 
+
+//     int age;
+
+//     void display(){
+//         cout<<"Class A..."<<endl;
+//         cout<<"Age : "<<age<<endl;
+//     }
+
+// };
+
+// class B : public A{
+
+// };
+
+
+
+// int main(){
+
+//    A a;
+
+//    a.age = 25;
+
+//    a.display();
+
+//    B b;
+
+//    b.age = 22;
+//    b.display();
+// }
+
+// // public -> protected
+
+// #include<iostream>
+// using namespace std;
+
+// class A{
+//     public : 
+//     void display(){
+//         cout<<"Class A..."<<endl;
+//     }
+
+// };
+
+// class B : protected A{
+
+//     public :
+
+//     void details(){
+//        display();
+//     }
+
+// };
+
+
+
+// int main(){
+
+// //    A a;
+
+// //    a.display();
+
+//    B b;
+//    b.details();
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// class A{
+//     public : 
+//     void display(){
+//         cout<<"Class A..."<<endl;
+//     }
+
+// };
+
+// class B : protected A{
+
+//     public :
+
+//     void details(){
+//        display();
+//     }
+
+// };
+
+
+// class C : protected B{
+
+//     public :
+
+//     void data(){
+//         display();
+//     }
+// };
+
+
+
+// int main(){
+
+// //    A a;
+
+// //    a.display();
+
+//    B b;
+// //    b.display(); // not ok
+
+// C c;
+
+// c.data();
+// }
+
+
+
+
+
+// // public -> private
+
+// #include<iostream>
+// using namespace std;
+
+// class A{
+//     public : 
+//     void display(){
+//         cout<<"Class A..."<<endl;
+//     }
+
+// };
+
+// class B : private A{
+
+//     public :
+
+//     void details(){
+//        display();
+//     }
+
+// };
+
+
+
+// int main(){
+
+// //    A a;
+
+// //    a.display();
+
+//    B b;
+//    b.details();
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class A{
+//     public : 
+//     void display(){
+//         cout<<"Class A..."<<endl;
+//     }
+
+// };
+
+// class B : private A{
+
+//     public :
+
+//     void details(){
+//        display();
+//     }
+
+// };
+
+
+// class C : protected B{
+
+//     public :
+
+//     void data(){
+//         display(); 
+//     }
+// };
+
+
+
+// int main(){
+
+// //    A a;
+
+// //    a.display();
+
+//    B b;
+// //    b.display(); // not ok
+
+// C c;
+
+// c.data();
+// }
+
+
+
+
