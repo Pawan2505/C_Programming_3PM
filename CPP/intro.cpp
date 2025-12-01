@@ -2381,3 +2381,215 @@
 
 
 
+
+
+// #include<iostream>
+// using namespace std;
+
+// class A{
+//     private :
+//     void display(){
+//         cout<<"Class A..."<<endl;
+//     }
+
+// };
+
+// class B: private A{
+
+//     public :
+
+//     void data(){
+//         display();
+//     }
+// };
+
+
+// int main(){
+
+// B b;
+
+// b.data();
+
+
+// }
+
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class A{
+//     private:
+//     void display(){
+//         cout<<"Class A..."<<endl;
+//     }
+
+//     friend class B;
+
+// };
+// class B: public A{
+
+//     public:
+
+//     void data(){
+//         display();
+//     }
+    
+// };
+
+// int main(){
+
+//     B b;
+
+//     b.data();
+
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// int main(){
+
+//     int x=10,y=20,z=50;
+
+//     cout<<"x : "<<x<<" y : "<<y<<" z : "<<z<<endl;
+
+// }
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// int disp(int x, int y, int z){
+//     return x+y+z;
+// }
+
+// int main(){
+
+//     int x=10,y=20,z=50;
+
+//     cout<<"Sum : "<<disp(x,y,z)<<endl;
+    
+// }
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// class A{
+//     public:
+
+//     void display(){
+//         cout<<"Class A ... "<<endl;
+//     }
+// };
+
+// class B :virtual public A{
+
+// };
+
+// class C :virtual public A{
+
+// };
+
+
+// class D : public B, public C{
+
+// };
+
+// int main(){
+
+
+//     D d;
+
+//     d.display();
+
+// }
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// template<typename T1, typename T2>
+
+// T1 add(T1 x, T2 y){
+    
+//     return x+y;
+//     // cout<<"Sum : "<<x+y<<endl;
+// }
+
+// int main(){
+
+// int sum = add(20.5, 10);
+
+// cout<<"The sum is : "<<sum<<endl;
+
+// }
+
+// #include<iostream>
+
+// using namespace std;
+
+// template<typename T1, typename T2>
+
+// T1 add(T1 x, T2 y){
+    
+//     return x+y;
+//     // cout<<"Sum : "<<x+y<<endl;
+// }
+
+// template<typename T1, typename T2>
+// T1 sub(T1 x, T2 y){
+    
+//     return x-y;
+//     // cout<<"Sum : "<<x+y<<endl;
+// }
+
+// int main(){
+
+    
+//     cout<<"The sum is : "<<add(20.5, 10)<<endl;
+//   cout<<" sub : "<<sub(25.5, 10)<<endl;
+
+// }
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// template<typename T1, typename T2>
+
+// class A{
+//     public :
+
+//     T1 name;
+//     T2 age;
+
+//     A(T1 name, T2 age){
+//         this->name = name;
+//         this->age = age;
+//     }
+
+//     T1 display(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//     }
+// };
+
+// int main(){
+
+//         A<string,int> a("Pawan",24);
+
+//         a.display();
+// }
