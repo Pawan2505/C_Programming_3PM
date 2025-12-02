@@ -2593,3 +2593,171 @@
 
 //         a.display();
 // }
+
+
+// #include<iostream>
+// #include<vector>
+
+// using namespace std;
+
+// int main(){
+
+//     vector<int>myvector = {12,34,56,78};
+
+//     cout<<"Size of vector : "<<myvector.size()<<endl;
+
+//     // for(int i = 0; i < myvector.size(); i++){
+//     //     cout<<myvector[i]<<endl;
+//     // }
+
+//     // forEach Loop
+
+//     for(int element : myvector){
+//         cout<<element<<" ";
+//     }
+// }
+
+
+// #include<iostream>
+// #include<vector>
+
+// using namespace std;
+
+// int main(){
+
+//     vector<int>myvector{12,34,56,78};
+
+//     cout<<"Size of vector : "<<myvector.size()<<endl;
+
+//     // for(int i = 0; i < myvector.size(); i++){
+//     //     cout<<myvector[i]<<endl;
+//     // }
+
+//     // forEach Loop
+
+//     for(int element : myvector){
+//         cout<<element<<" ";
+//     }
+// }
+
+
+// #include<iostream>
+// #include<vector>
+
+// using namespace std;
+
+// int main(){
+
+//     vector<int>myvector(5,2);
+
+//     cout<<"Size of vector : "<<myvector.size()<<endl;
+
+//     // for(int i = 0; i < myvector.size(); i++){
+//     //     cout<<myvector[i]<<endl;
+//     // }
+
+//     // forEach Loop
+
+//     for(int element : myvector){
+//         cout<<element<<" ";
+//     }
+// }
+
+
+// #include<iostream>
+// #include<vector>
+
+// using namespace std;
+
+// int main(){
+
+//     vector<int>myvector(5);
+    
+//     myvector.push_back(10);
+//     myvector.push_back(20);
+//     myvector.push_back(30);
+//     myvector.push_back(40);
+//     myvector.push_back(50);
+//     myvector.push_back(60);
+ 
+//     cout<<"Size of vector : "<<myvector.size()<<endl;
+
+
+//     // for(int i = 0; i < myvector.size(); i++){
+//     //     cout<<myvector[i]<<endl;
+//     // }
+
+//     // forEach Loop
+
+//     for(int element : myvector){
+//         cout<<element<<" ";
+//     }
+// }
+
+
+// #include<iostream>
+// #include<vector>
+
+// using namespace std;
+
+// int main(){
+
+//     vector<int> myvector(6); // fixed size = 5
+    
+//     myvector[0] = 10;
+//     myvector[1] = 20;
+//     myvector[2] = 30;
+//     myvector[3] = 40;
+//     myvector[4] = 50;
+//     // myvector[4] = 50;
+ 
+//     cout<<"Size of vector : "<<myvector.size()<<endl;
+
+//     for(int element : myvector){
+//         cout<<element<<" ";
+//     }
+// }
+
+
+
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+int main(){
+
+    vector<int> myvector;
+
+    myvector.push_back(10);
+    myvector.push_back(20);
+    myvector.push_back(30);
+    myvector.push_back(40);
+
+   myvector.empty()? cout<<" : Is empty":cout<<"Not empty"<<endl;
+    
+
+    cout<<"Size of vector : "<<myvector.size()<<endl;
+
+    cout<<"My vector is : ";
+
+    for(int element : myvector){
+        cout<<element<<" ";
+    }
+
+    cout<<"\nDeleted data from vector : "<<myvector.back()<<endl;
+    myvector.pop_back();
+    cout<<"\n After deleted vector : ";
+
+    for(int element : myvector){
+        cout<<element<<" ";
+    }
+
+    cout<<"\nStarting data in vector : "<<myvector.front()<<endl;
+    cout<<"value present at index in vector :"<<myvector.at(2)<<endl;
+
+    
+}
+
+
+
