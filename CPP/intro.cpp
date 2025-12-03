@@ -2720,6 +2720,49 @@
 
 
 
+// #include<iostream>
+// #include<vector>
+
+// using namespace std;
+
+// int main(){
+
+//     vector<int> myvector;
+
+//     myvector.push_back(10);
+//     myvector.push_back(20);
+//     myvector.push_back(30);
+//     myvector.push_back(40);
+
+//    myvector.empty()? cout<<" : Is empty":cout<<"Not empty"<<endl;
+    
+
+//     cout<<"Size of vector : "<<myvector.size()<<endl;
+
+//     cout<<"My vector is : ";
+
+//     for(int element : myvector){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<"\nDeleted data from vector : "<<myvector.back()<<endl;
+//     myvector.pop_back();
+//     cout<<"\n After deleted vector : ";
+
+//     for(int element : myvector){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<"\nStarting data in vector : "<<myvector.front()<<endl;
+//     cout<<"value present at index in vector :"<<myvector.at(2)<<endl;
+
+    
+// }
+
+
+
+
+
 #include<iostream>
 #include<vector>
 
@@ -2756,7 +2799,33 @@ int main(){
     cout<<"\nStarting data in vector : "<<myvector.front()<<endl;
     cout<<"value present at index in vector :"<<myvector.at(2)<<endl;
 
+    // myvector.insert(myvector.begin(),myvector.end())
+
+
+    // for(auto i = myvector.begin(); i != myvector.end() ; i++ ){
+    //     cout<<"address : "<<&(*i)<<" value : "<<*i<<" ";
+    // }
+
+    myvector.insert(myvector.begin()+3,100);
+    myvector.insert(myvector.end()-3,200);
+    for(int element : myvector){
+        cout<<element<<" ";
+    }
+    myvector.erase(myvector.begin()+2);
+
+    cout<<" After erase() : ";
     
+    for(int element : myvector){
+        cout<<element<<" ";
+    }
+
+    // myvector.clear();
+
+    // cout<<"after clear() vector :";
+
+    // for(int element : myvector){
+    //     cout<<element<<" ";
+    // }
 }
 
 
