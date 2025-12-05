@@ -2760,73 +2760,134 @@
 // }
 
 
+// #include<iostream>
+// #include<vector>
+
+// using namespace std;
+
+// int main(){
+
+//     vector<int> myvector;
+
+//     myvector.push_back(10);
+//     myvector.push_back(20);
+//     myvector.push_back(30);
+//     myvector.push_back(40);
+
+//    myvector.empty()? cout<<" : Is empty":cout<<"Not empty"<<endl;
+    
+
+//     cout<<"Size of vector : "<<myvector.size()<<endl;
+
+//     cout<<"My vector is : ";
+
+//     for(int element : myvector){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<"\nDeleted data from vector : "<<myvector.back()<<endl;
+//     myvector.pop_back();
+//     cout<<"\n After deleted vector : ";
+
+//     for(int element : myvector){
+//         cout<<element<<" ";
+//     }
+
+//     cout<<"\nStarting data in vector : "<<myvector.front()<<endl;
+//     cout<<"value present at index in vector :"<<myvector.at(2)<<endl;
+
+//     // myvector.insert(myvector.begin(),myvector.end())
+
+
+//     // for(auto i = myvector.begin(); i != myvector.end() ; i++ ){
+//     //     cout<<"address : "<<&(*i)<<" value : "<<*i<<" ";
+//     // }
+
+//     myvector.insert(myvector.begin()+3,100);
+//     myvector.insert(myvector.end()-3,200);
+//     for(int element : myvector){
+//         cout<<element<<" ";
+//     }
+//     myvector.erase(myvector.begin()+2);
+
+//     cout<<" After erase() : ";
+
+//     for(int element : myvector){
+//         cout<<element<<" ";
+//     }
+
+//     // myvector.clear();
+
+//     // cout<<"after clear() vector :";
+
+//     // for(int element : myvector){
+//     //     cout<<element<<" ";
+//     // }
+// }
 
 
 
 #include<iostream>
-#include<vector>
-
 using namespace std;
+
+class Node{
+    public:
+
+    int data;
+    Node* next;
+
+    Node(int data){
+        this->data = data;
+        this->next = NULL;
+    }
+
+};
+
+void inesrtAtTail(Node* &head, int data){
+    Node *newNode = new Node(data);
+
+    if(head == NULL){
+        newNode->next = head;
+        head = newNode;
+        return;
+    }
+
+    Node* temp = head;
+
+    while(temp->next != NULL){
+        temp = temp->next;
+    }
+
+    temp->next = newNode;
+
+}
+
+void display(Node* &head){
+    if(head== NULL){
+        cout<<"LikedList is Empty!"<<endl;
+        return;
+    }
+
+    Node* temp = head;
+
+    while(temp != NULL){
+        cout<<temp->data<<"->";
+        temp = temp->next;
+    }
+
+    cout<<"NULL"<<endl;
+}
 
 int main(){
 
-    vector<int> myvector;
+    Node* head = NULL;
 
-    myvector.push_back(10);
-    myvector.push_back(20);
-    myvector.push_back(30);
-    myvector.push_back(40);
+    // inesrtAtTail(head,10);
+    // inesrtAtTail(head,20);
+    // inesrtAtTail(head,30);
+    // inesrtAtTail(head,40);
+    // inesrtAtTail(head,50);
 
-   myvector.empty()? cout<<" : Is empty":cout<<"Not empty"<<endl;
-    
+    display(head);
 
-    cout<<"Size of vector : "<<myvector.size()<<endl;
-
-    cout<<"My vector is : ";
-
-    for(int element : myvector){
-        cout<<element<<" ";
-    }
-
-    cout<<"\nDeleted data from vector : "<<myvector.back()<<endl;
-    myvector.pop_back();
-    cout<<"\n After deleted vector : ";
-
-    for(int element : myvector){
-        cout<<element<<" ";
-    }
-
-    cout<<"\nStarting data in vector : "<<myvector.front()<<endl;
-    cout<<"value present at index in vector :"<<myvector.at(2)<<endl;
-
-    // myvector.insert(myvector.begin(),myvector.end())
-
-
-    // for(auto i = myvector.begin(); i != myvector.end() ; i++ ){
-    //     cout<<"address : "<<&(*i)<<" value : "<<*i<<" ";
-    // }
-
-    myvector.insert(myvector.begin()+3,100);
-    myvector.insert(myvector.end()-3,200);
-    for(int element : myvector){
-        cout<<element<<" ";
-    }
-    myvector.erase(myvector.begin()+2);
-
-    cout<<" After erase() : ";
-    
-    for(int element : myvector){
-        cout<<element<<" ";
-    }
-
-    // myvector.clear();
-
-    // cout<<"after clear() vector :";
-
-    // for(int element : myvector){
-    //     cout<<element<<" ";
-    // }
 }
-
-
-
