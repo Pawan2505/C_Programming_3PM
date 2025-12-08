@@ -2827,26 +2827,92 @@
 
 
 
+// #include<iostream>
+// using namespace std;
+
+// class Node{
+//     public:
+
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+
+// };
+
+// void inesrtAtTail(Node* &head, int data){
+//     Node *newNode = new Node(data);
+
+//     if(head == NULL){
+//         newNode->next = head;
+//         head = newNode;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp->next != NULL){
+//         temp = temp->next;
+//     }
+
+//     temp->next = newNode;
+
+// }
+
+// void display(Node* &head){
+//     if(head== NULL){
+//         cout<<"LikedList is Empty!"<<endl;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp = temp->next;
+//     }
+
+//     cout<<"NULL"<<endl;
+// }
+
+// int main(){
+
+//     Node* head = NULL;
+
+//     // inesrtAtTail(head,10);
+//     // inesrtAtTail(head,20);
+//     // inesrtAtTail(head,30);
+//     // inesrtAtTail(head,40);
+//     // inesrtAtTail(head,50);
+
+//     display(head);
+
+// }
+
+
 #include<iostream>
 using namespace std;
 
 class Node{
     public:
-
     int data;
-    Node* next;
+    Node *next;
 
     Node(int data){
         this->data = data;
         this->next = NULL;
     }
-
 };
 
-void inesrtAtTail(Node* &head, int data){
+void insertAtTail(Node* &head, int data){
+
     Node *newNode = new Node(data);
 
     if(head == NULL){
+
         newNode->next = head;
         head = newNode;
         return;
@@ -2862,31 +2928,35 @@ void inesrtAtTail(Node* &head, int data){
 
 }
 
+
 void display(Node* &head){
-    if(head== NULL){
-        cout<<"LikedList is Empty!"<<endl;
+
+    if(head == NULL){
+        cout<<"LinkedLIst is empty"<<endl;
         return;
     }
 
-    Node* temp = head;
+  Node* temp = head;
 
-    while(temp != NULL){
-        cout<<temp->data<<"->";
-        temp = temp->next;
-    }
+  while(temp != NULL){
+    cout<<temp->data<<"->";
+    temp = temp->next;
+  }
 
-    cout<<"NULL"<<endl;
+  cout<<"NULL"<<endl;
+
 }
+
 
 int main(){
 
     Node* head = NULL;
 
-    // inesrtAtTail(head,10);
-    // inesrtAtTail(head,20);
-    // inesrtAtTail(head,30);
-    // inesrtAtTail(head,40);
-    // inesrtAtTail(head,50);
+    insertAtTail(head,10);
+    insertAtTail(head,20);
+    insertAtTail(head,30);
+    insertAtTail(head,40);
+    insertAtTail(head,50);
 
     display(head);
 
