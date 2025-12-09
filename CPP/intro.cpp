@@ -2893,13 +2893,129 @@
 // }
 
 
+// #include<iostream>
+// using namespace std;
+
+// class Node{
+//     public:
+//     int data;
+//     Node *next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+// void insertAtTail(Node* &head, int data){
+
+//     Node *newNode = new Node(data);
+
+//     if(head == NULL){
+
+//         newNode->next = head;
+//         head = newNode;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp->next != NULL){
+//         temp = temp->next;
+//     }
+
+//     temp->next = newNode;
+
+// }
+
+// void insertAtHead(Node* &head, int data){
+
+//     Node *newNode = new Node(data);
+
+//     newNode->next = head;
+//     head = newNode;
+// }
+
+// void display(Node* &head){
+
+//     if(head == NULL){
+//         cout<<"LinkedLIst is empty"<<endl;
+//         return;
+//     }
+
+//   Node* temp = head;
+
+//   while(temp != NULL){
+//     cout<<temp->data<<"->";
+//     temp = temp->next;
+//   }
+
+//   cout<<"NULL"<<endl;
+
+// }
+
+
+// int main(){
+
+//     Node* head = NULL;
+
+//     insertAtTail(head,10);
+//     insertAtTail(head,20);
+//     insertAtTail(head,30);
+//     insertAtTail(head,40);
+//     insertAtTail(head,50);
+
+//     display(head);
+
+//     insertAtHead(head,100);
+//     insertAtHead(head,200);
+//     insertAtHead(head,300);
+//     display(head);
+
+// }
+
+
+// what is linked list?
+
+// A linked list is a linear data structure where each element is a separate object, called a node.
+
+// Each node contains two parts: data and a reference (or pointer) to the next node in the sequence.
+
+// The last node in the LINKED list points to null, indicating the end of the list.
+// Start node pointed by head
+
+// Type of linked list:
+// 1. singly linked list
+// 2. doubly linked list    
+// 3. circular linked list
+// 4. circular doubly linked list
+
+// 1. singly linked list : 
+
+// singly linked list is a type of linked list where each node contains data and a pointer to the next node in the sequence. The last node points to null, indicating the end of the list. Traversal is unidirectional, from head to tail.
+
+// 2. doubly linked list :
+
+// doubly linked list is a type of linked list where each node contains data, a pointer to the next node, and a pointer to the previous node. This allows for bidirectional traversal, enabling movement both forward and backward through the list. The first node's previous pointer points to null, and the last node's next pointer points to null, indicating the ends of the list.
+
+// 3. circular linked list :
+
+// circular linked list is a type of linked list where the last node points back to the first node, forming a circular structure. This allows for continuous traversal of the list without encountering a null reference. In a circular linked list, there is no definitive end, and one can start from any node and eventually return to it by following the next pointers.
+
+//circular doubly linked list :
+
+// circular doubly linked list is a type of linked list where each node contains data, a pointer to the next node, and a pointer to the previous node. The last node's next pointer points back to the first node, and the first node's previous pointer points to the last node, forming a circular structure. This allows for bidirectional traversal of the list in a continuous loop, enabling movement both forward and backward without encountering null references.
+
+
 #include<iostream>
 using namespace std;
+
+// Node -> by class
 
 class Node{
     public:
     int data;
-    Node *next;
+    Node* next;
 
     Node(int data){
         this->data = data;
@@ -2907,12 +3023,11 @@ class Node{
     }
 };
 
-void insertAtTail(Node* &head, int data){
+void inserAtTail(Node* &head, int data){
 
-    Node *newNode = new Node(data);
+    Node* newNode = new Node(data);
 
     if(head == NULL){
-
         newNode->next = head;
         head = newNode;
         return;
@@ -2928,36 +3043,40 @@ void insertAtTail(Node* &head, int data){
 
 }
 
+void insertAtHead(Node* &head, int data){
+    Node *newNode = new Node(data);
+
+    newNode->next = head;
+    head = newNode;
+}
 
 void display(Node* &head){
-
     if(head == NULL){
-        cout<<"LinkedLIst is empty"<<endl;
+        cout<<"LinkedList Empty!"<<endl;
         return;
     }
 
-  Node* temp = head;
+    Node* temp = head;
 
-  while(temp != NULL){
-    cout<<temp->data<<"->";
-    temp = temp->next;
-  }
-
-  cout<<"NULL"<<endl;
-
+    while(temp != NULL){
+        cout<<temp->data<<"->";
+        temp = temp->next;
+    }
+    cout<<"NULL"<<endl;
 }
 
-
 int main(){
-
     Node* head = NULL;
 
-    insertAtTail(head,10);
-    insertAtTail(head,20);
-    insertAtTail(head,30);
-    insertAtTail(head,40);
-    insertAtTail(head,50);
+    inserAtTail(head,10);
+    inserAtTail(head,20);
+    inserAtTail(head,30);
+    inserAtTail(head,40);
 
+    display(head);
+    insertAtHead(head,312);
+    insertAtHead(head,412);
+    insertAtHead(head,512);
     display(head);
 
 }
