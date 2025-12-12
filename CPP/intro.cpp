@@ -3007,6 +3007,84 @@
 // circular doubly linked list is a type of linked list where each node contains data, a pointer to the next node, and a pointer to the previous node. The last node's next pointer points back to the first node, and the first node's previous pointer points to the last node, forming a circular structure. This allows for bidirectional traversal of the list in a continuous loop, enabling movement both forward and backward without encountering null references.
 
 
+// #include<iostream>
+// using namespace std;
+
+// // Node -> by class
+
+// class Node{
+//     public:
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+// void inserAtTail(Node* &head, int data){
+
+//     Node* newNode = new Node(data);
+
+//     if(head == NULL){
+//         newNode->next = head;
+//         head = newNode;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp->next != NULL){
+//         temp = temp->next;
+//     }
+
+//     temp->next = newNode;
+
+// }
+
+// void insertAtHead(Node* &head, int data){
+//     Node *newNode = new Node(data);
+
+//     newNode->next = head;
+//     head = newNode;
+// }
+
+// void display(Node* &head){
+//     if(head == NULL){
+//         cout<<"LinkedList Empty!"<<endl;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp = temp->next;
+//     }
+//     cout<<"NULL"<<endl;
+// }
+
+// int main(){
+//     Node* head = NULL;
+
+//     inserAtTail(head,10);
+//     inserAtTail(head,20);
+//     inserAtTail(head,30);
+//     inserAtTail(head,40);
+
+//     display(head);
+//     insertAtHead(head,312);
+//     insertAtHead(head,412);
+//     insertAtHead(head,512);
+//     display(head);
+
+// }
+
+
+// Linked List : Insert at specific position
+
+
 #include<iostream>
 using namespace std;
 
@@ -3065,6 +3143,44 @@ void display(Node* &head){
     cout<<"NULL"<<endl;
 }
 
+void insertAtSpecificPosition(Node* &head, int position, int data){
+    cout<<"insertAtSpecificPosition"<<endl;
+    cout<<"Position : "<<position<<endl;
+    cout<<"data : "<<data<<endl;
+    
+    Node* newNode = new Node(data);
+    
+    // Insert at 1st postion
+
+    if(position == 1){
+        insertAtHead(head,data);
+        return;
+    }
+
+    
+    // specific position
+
+    Node *temp = head;
+
+    int count = 1; 
+
+    while(count<position-1 && temp != NULL){
+        cout<<"Iterated : "<<temp->data<<endl;
+        temp = temp->next;
+        count++;
+    }
+    cout<<"next"<<endl;
+    cout<<newNode->data<<endl;
+
+    newNode->next = temp->next;
+    temp->next = newNode;
+
+    if(temp == NULL){
+        inserAtTail(head,data);
+        return;
+    }
+}
+
 int main(){
     Node* head = NULL;
 
@@ -3079,4 +3195,17 @@ int main(){
     insertAtHead(head,512);
     display(head);
 
+    insertAtSpecificPosition(head,3,999);
+
+    display(head);
+    insertAtSpecificPosition(head,1,1111);
+    display(head);
+
+    insertAtSpecificPosition(head,10,101010);
+    insertAtSpecificPosition(head,11,101010);
+    display(head);
+
+
 }
+
+
