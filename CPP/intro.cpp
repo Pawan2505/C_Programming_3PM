@@ -4,8 +4,8 @@
 
 //     // printf("Hello Bhai!");
 
-//     std::cout<<"Aur bhai samjh aa raha hai!"<<std::endl;
-//     std::cout<<"Aur bhai samjh aa raha hai!";
+//     cout<<"Aur bhai samjh aa raha hai!"<<endl;
+//     cout<<"Aur bhai samjh aa raha hai!";
 
 // }
 
@@ -430,12 +430,12 @@
 //     int arr[6];
 
 //     for(int i = 0; i <= 5; i++){
-//         std::cout<<"Enter element at "<<i<<"index :";
-//         std::cin>>arr[i];
+//         cout<<"Enter element at "<<i<<"index :";
+//         cin>>arr[i];
 //     }
-//     std::cout<<"\n Original Array : ";
+//     cout<<"\n Original Array : ";
 //     for(int i = 0; i <= 5; i++){
-//         std::cout<<arr[i]<<" ";
+//         cout<<arr[i]<<" ";
 //     }
 // }
 
@@ -3085,127 +3085,405 @@
 // Linked List : Insert at specific position
 
 
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+
+// // Node -> by class
+
+// class Node{
+//     public:
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+// void inserAtTail(Node* &head, int data){
+
+//     Node* newNode = new Node(data);
+
+//     if(head == NULL){
+//         newNode->next = head;
+//         head = newNode;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp->next != NULL){
+//         temp = temp->next;
+//     }
+
+//     temp->next = newNode;
+
+// }
+
+// void insertAtHead(Node* &head, int data){
+//     Node *newNode = new Node(data);
+
+//     newNode->next = head;
+//     head = newNode;
+// }
+
+// void display(Node* &head){
+//     if(head == NULL){
+//         cout<<"LinkedList Empty!"<<endl;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp = temp->next;
+//     }
+//     cout<<"NULL"<<endl;
+// }
+
+// void insertAtSpecificPosition(Node* &head, int position, int data){
+//     cout<<"insertAtSpecificPosition"<<endl;
+//     cout<<"Position : "<<position<<endl;
+//     cout<<"data : "<<data<<endl;
+    
+//     Node* newNode = new Node(data);
+    
+//     // Insert at 1st postion
+
+//     if(position == 1){
+//         insertAtHead(head,data);
+//         return;
+//     }
+
+    
+//     // specific position
+
+//     Node *temp = head;
+
+//     int count = 1; 
+
+//     while(count<position-1 && temp != NULL){
+//         cout<<"Iterated : "<<temp->data<<endl;
+//         temp = temp->next;
+//         count++;
+//     }
+//     cout<<"next"<<endl;
+//     cout<<newNode->data<<endl;
+
+//     newNode->next = temp->next;
+//     temp->next = newNode;
+
+//     if(temp == NULL){
+//         inserAtTail(head,data);
+//         return;
+//     }
+// }
+
+// int main(){
+//     Node* head = NULL;
+
+//     inserAtTail(head,10);
+//     inserAtTail(head,20);
+//     inserAtTail(head,30);
+//     inserAtTail(head,40);
+
+//     display(head);
+//     insertAtHead(head,312);
+//     insertAtHead(head,412);
+//     insertAtHead(head,512);
+//     display(head);
+
+//     insertAtSpecificPosition(head,3,999);
+
+//     display(head);
+//     insertAtSpecificPosition(head,1,1111);
+//     display(head);
+
+//     insertAtSpecificPosition(head,10,101010);
+//     insertAtSpecificPosition(head,11,101010);
+//     display(head);
+// }
+
+
+
+// #include<iostream>
+// #include<stack>
+
+// using namespace std;
+
+// int main(){
+//     stack<int>myStack;
+
+//     myStack.push(10);
+//     myStack.push(20);
+//     myStack.push(30);
+//     myStack.push(40);
+//     myStack.push(50);
+
+//     // cout<<"Stack size : "<<myStack.size()<<endl;
+
+//     // myStack.pop();
+
+//     // cout<<"Stack size : "<<myStack.size()<<endl;
+
+//     // cout<<"Top element is stack : "<<myStack.top()<<endl;
+
+//     // display stack element
+
+//     // for(int i = 1; i <= myStack.size(); i++){
+//     //     cout<<myStack.top()<<" ";
+//     //     myStack.pop();
+//     // }
+
+    
+//     // cout<<"Stack is empty or not : "<<myStack.empty()<<endl;
+//     while(myStack.empty() == 0){
+//         cout<<myStack.top()<<" ";
+//         myStack.pop();
+//     }
+//     cout<<"\n Stack size : "<<myStack.size()<<endl;
+// }
+
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// #define SIZE 5
+ 
+// int top = -1;
+// int arr[SIZE];
+
+// void push(int data){
+
+//     if(top == SIZE-1){
+//         cout<<"Stack is full!"<<endl;
+//         return;
+//     }
+//     top++;
+
+//     arr[top] = data;
+
+// }
+
+// void display(){
+
+//     while(top != -1){
+//         cout<<arr[top--]<<" ";
+//     }
+// }
+
+// int main(){
+
+//   push(10);
+//   push(20);
+//   push(30);
+//   push(40);
+//   push(50);
+//   push(60);
+
+//   display();
+   
+
+// }
+
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+
+// class Node{
+//     public:
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+// void insterAtHead(Node* &head, int data){
+
+//     Node *newNode = new Node(data);
+
+//     newNode->next = head;
+//     head = newNode;
+// }
+
+
+// void display(Node* &head){
+//     if(head == NULL){
+//         cout<<"LinkedList is Empty!"<<endl;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp = temp->next;
+//     }
+//     cout<<"NULL"<<endl;
+// }
+
+// int main(){
+
+//     Node* head = NULL;
+
+//     insterAtHead(head,10);
+//     insterAtHead(head,20);
+//     insterAtHead(head,30);
+//     insterAtHead(head,40);
+//     insterAtHead(head,50);
+
+//     display(head);
+
+// }
+
+
+
+
+// #include<iostream>
+
+// using namespace std;
+
+
+// class Node{
+//     public:
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+// void insterAtHead(Node* &head, int data){
+
+//     Node *newNode = new Node(data);
+
+//     newNode->next = head;
+//     head = newNode;
+// }
+
+
+// void display(Node* &head){
+//     if(head == NULL){
+//         cout<<"LinkedList is Empty!"<<endl;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp = temp->next;
+//     }
+//     cout<<"NULL"<<endl;
+// }
+
+// void updateNode(Node* &head, int position, int newData){
+    
+//     if(head == NULL){
+//         cout<<"LinkedList Empty!"<<endl;
+//         return;
+//     }
+// // cout<<"Update Node..."<<endl;
+//     Node* temp = head;
+//     int count = 1;
+//     while(temp != NULL && count<position){
+//         temp = temp->next;
+//         count++;
+//     }
+
+//     temp->data = newData;
+// }
+
+// int main(){
+
+//     Node* head = NULL;
+
+//     insterAtHead(head,10);
+//     insterAtHead(head,20);
+//     insterAtHead(head,30);
+//     insterAtHead(head,40);
+//     insterAtHead(head,50);
+
+//     display(head);
+
+//     updateNode(head,1,36);
+     
+//     display(head);
+
+// }
+
+
+// #include<iostream>
+// #include<queue>
+// using namespace std;
+
+// int main(){
+//     queue<int>myQueue;
+
+//     myQueue.push(10);
+//     myQueue.push(20);
+//     myQueue.push(30);
+//     myQueue.push(40);
+//     myQueue.push(50);
+//     myQueue.push(60);
+
+//     cout<<"Size of Queue : "<<myQueue.size()<<endl;
+
+//     // for(int i = 1; i <= myQueue.size(); i++){
+//     //     cout<<myQueue.front()<<" ";
+//     //     myQueue.pop();
+//     // }
+
+//     // while(!myQueue.empty()){
+//     //     cout<<myQueue.front()<<" ";
+//     //     myQueue.pop();
+//     // }
+//     // cout<<"\nSize of Queue : "<<myQueue.size()<<endl;
+
+// }
+
+
+#include <iostream>
+#include <queue>
 using namespace std;
 
-// Node -> by class
+class Student {
+public:
+    string name;
+    int rollNo;
 
-class Node{
-    public:
-    int data;
-    Node* next;
-
-    Node(int data){
-        this->data = data;
-        this->next = NULL;
+    Student(string n, int r){
+        name = n;
+        rollNo = r;
+        cout << "Student " << name << " created!\n";
     }
 };
 
-void inserAtTail(Node* &head, int data){
+int main() {
+    queue<Student> school;
 
-    Node* newNode = new Node(data);
+    // emplace calls the Student constructor directly inside the queue memory
+    school.emplace("Rahul", 101); 
+    school.emplace("Aman", 102); 
+    school.emplace("Manish", 103); 
+    school.emplace("Pankaj", 104); 
 
-    if(head == NULL){
-        newNode->next = head;
-        head = newNode;
-        return;
-    }
-
-    Node* temp = head;
-
-    while(temp->next != NULL){
-        temp = temp->next;
-    }
-
-    temp->next = newNode;
-
-}
-
-void insertAtHead(Node* &head, int data){
-    Node *newNode = new Node(data);
-
-    newNode->next = head;
-    head = newNode;
-}
-
-void display(Node* &head){
-    if(head == NULL){
-        cout<<"LinkedList Empty!"<<endl;
-        return;
-    }
-
-    Node* temp = head;
-
-    while(temp != NULL){
-        cout<<temp->data<<"->";
-        temp = temp->next;
-    }
-    cout<<"NULL"<<endl;
-}
-
-void insertAtSpecificPosition(Node* &head, int position, int data){
-    cout<<"insertAtSpecificPosition"<<endl;
-    cout<<"Position : "<<position<<endl;
-    cout<<"data : "<<data<<endl;
-    
-    Node* newNode = new Node(data);
-    
-    // Insert at 1st postion
-
-    if(position == 1){
-        insertAtHead(head,data);
-        return;
-    }
-
-    
-    // specific position
-
-    Node *temp = head;
-
-    int count = 1; 
-
-    while(count<position-1 && temp != NULL){
-        cout<<"Iterated : "<<temp->data<<endl;
-        temp = temp->next;
-        count++;
-    }
-    cout<<"next"<<endl;
-    cout<<newNode->data<<endl;
-
-    newNode->next = temp->next;
-    temp->next = newNode;
-
-    if(temp == NULL){
-        inserAtTail(head,data);
-        return;
+    while(!school.empty()){
+        cout<<school.front().name<<" ";
+        school.pop();
     }
 }
-
-int main(){
-    Node* head = NULL;
-
-    inserAtTail(head,10);
-    inserAtTail(head,20);
-    inserAtTail(head,30);
-    inserAtTail(head,40);
-
-    display(head);
-    insertAtHead(head,312);
-    insertAtHead(head,412);
-    insertAtHead(head,512);
-    display(head);
-
-    insertAtSpecificPosition(head,3,999);
-
-    display(head);
-    insertAtSpecificPosition(head,1,1111);
-    display(head);
-
-    insertAtSpecificPosition(head,10,101010);
-    insertAtSpecificPosition(head,11,101010);
-    display(head);
-
-
-}
-
-
