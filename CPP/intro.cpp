@@ -3457,33 +3457,88 @@
 // }
 
 
-#include <iostream>
-#include <queue>
-using namespace std;
+// #include <iostream>
+// #include <queue>
+// using namespace std;
 
-class Student {
-public:
-    string name;
-    int rollNo;
+// class Student {
+// public:
+//     string name;
+//     int rollNo;
 
-    Student(string n, int r){
-        name = n;
-        rollNo = r;
-        cout << "Student " << name << " created!\n";
-    }
-};
+//     Student(string n, int r){
+//         name = n;
+//         rollNo = r;
+//         cout << "Student " << name << " created!\n";
+//     }
+// };
 
-int main() {
-    queue<Student> school;
+// int main() {
+//     queue<Student> school;
 
-    // emplace calls the Student constructor directly inside the queue memory
-    school.emplace("Rahul", 101); 
-    school.emplace("Aman", 102); 
-    school.emplace("Manish", 103); 
-    school.emplace("Pankaj", 104); 
+//     // emplace calls the Student constructor directly inside the queue memory
+//     school.emplace("Rahul", 101); 
+//     school.emplace("Aman", 102); 
+//     school.emplace("Manish", 103); 
+//     school.emplace("Pankaj", 104); 
 
-    while(!school.empty()){
-        cout<<school.front().name<<" ";
-        school.pop();
-    }
-}
+//     while(!school.empty()){
+//         cout<<school.front().name<<" ";
+//         school.pop();
+//     }
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+// #define SIZE 5
+
+// int front = -1;
+// int rear = -1;
+// int arr[SIZE];
+
+// void push(int data){
+
+//     if(rear == -1){
+//         front++;
+//     }
+
+//     if(rear < SIZE-1){
+//         rear++;
+//         arr[rear] = data;
+//     }else{
+//         cout<<"Queue is full!"<<endl;
+//     }
+// }
+
+// void pop(){
+//     front++;
+// }
+
+// void display(){
+
+//     for(int i = front; i <= rear; i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+
+// int main(){
+//     push(10);
+//     push(20);
+//     push(30);
+//     push(40);
+//     push(50);
+//     // push(60);
+
+//     display();
+//     pop();
+// cout<<endl;
+//     display();
+// }
+
+
+// Queue using LinkedList 
+
