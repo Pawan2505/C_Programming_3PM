@@ -3574,5 +3574,92 @@
 // }
 
 
-// Queue using LinkedList 
+// Queue using LinkedList  
+// Underflow: यह स्थिति तब होती है जब डेटा स्ट्रक्चर में कोई डेटा नहीं होता और फिर भी आप उसे डिलीट करने का ऑपरेशन करते हैं।
+// Overflow: इसके विपरीत, जब डेटा स्ट्रक्चर पूरी तरह भर चुका हो और आप नया डेटा डालना चाहें, तो उसे 'Overflow' कहते हैं।
 
+
+#include<iostream>
+
+using namespace std;
+
+class Node{
+    public:
+        int data;
+        Node *next;
+
+        Node(int data){
+            this->data = data;
+            this->next = NULL;
+        }
+};
+
+
+void enqueue(Node* &head, int data){
+    Node *newNode =  new Node(data);
+
+    if(head == NULL){
+        newNode->next = head;
+        head = newNode;
+        return;
+    }
+
+    Node *temp = head;
+
+    while(temp->next != NULL){
+        temp = temp->next;
+    }
+
+    temp->next = newNode;
+}
+
+
+void dequeue(Node* &head){
+
+    if(head == NULL){
+        cout<<"Queue Underflow"<<endl;
+        return;
+    }
+
+    Node* temp = head;
+
+    head = head->next;
+
+    delete temp;
+}
+
+
+void display(Node* &head){
+
+    if(head == NULL){
+        cout<<"Queue is Empty!"<<endl;
+        return;
+    }
+
+    Node *temp = head;
+
+    while(temp != NULL){
+        cout<<temp->data<<"->";
+        temp = temp->next;
+    }
+
+    cout<<"NULL"<<endl;
+}
+
+int main(){
+
+Node *head = NULL;
+
+enqueue(head,10);
+enqueue(head,20);
+enqueue(head,30);
+enqueue(head,40);
+enqueue(head,50);
+
+
+display(head);
+
+dequeue(head);
+
+display(head);
+}
