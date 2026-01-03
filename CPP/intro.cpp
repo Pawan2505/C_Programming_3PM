@@ -3579,87 +3579,158 @@
 // Overflow: इसके विपरीत, जब डेटा स्ट्रक्चर पूरी तरह भर चुका हो और आप नया डेटा डालना चाहें, तो उसे 'Overflow' कहते हैं।
 
 
-#include<iostream>
+// #include<iostream>
 
+// using namespace std;
+
+// class Node{
+//     public:
+//         int data;
+//         Node *next;
+
+//         Node(int data){
+//             this->data = data;
+//             this->next = NULL;
+//         }
+// };
+
+
+// void enqueue(Node* &head, int data){
+//     Node *newNode =  new Node(data);
+
+//     if(head == NULL){
+//         newNode->next = head;
+//         head = newNode;
+//         return;
+//     }
+
+//     Node *temp = head;
+
+//     while(temp->next != NULL){
+//         temp = temp->next;
+//     }
+
+//     temp->next = newNode;
+// }
+
+
+// void dequeue(Node* &head){
+
+//     if(head == NULL){
+//         cout<<"Queue Underflow"<<endl;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     head = head->next;
+
+//     delete temp;
+// }
+
+
+// void display(Node* &head){
+
+//     if(head == NULL){
+//         cout<<"Queue is Empty!"<<endl;
+//         return;
+//     }
+
+//     Node *temp = head;
+
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp = temp->next;
+//     }
+
+//     cout<<"NULL"<<endl;
+// }
+
+// int main(){
+
+// Node *head = NULL;
+
+// enqueue(head,10);
+// enqueue(head,20);
+// enqueue(head,30);
+// enqueue(head,40);
+// enqueue(head,50);
+
+
+// display(head);
+
+// dequeue(head);
+
+// display(head);
+// }
+
+
+// Queue using LinkedList :
+
+// #include<iostream>
+// using namespace std;
+
+// class Node{
+//     public:
+//      int data;
+//      Node* next;
+
+//      Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//      }
+// };
+
+// void queueInsert(Node* &head, int data){
+
+//     Node* newNode = new Node(data);
+
+//     if(head == NULL){
+//         newNode->next = head;
+//         head = newNode;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+// }
+
+// int main(){
+
+//     Node* head = NULL;
+
+//     queueInsert(head,10);
+
+// }
+
+
+
+#include<iostream>
 using namespace std;
 
-class Node{
-    public:
-        int data;
-        Node *next;
 
-        Node(int data){
-            this->data = data;
-            this->next = NULL;
+void bubbleSort(int arr[], int n){
+
+    for(int i = 0; i <n ; i++){  // phase
+
+        for(int j = 0; j < n-i-1; j++){
+            if(arr[j]>arr[j+1]){
+                swap(arr[j],arr[j+1]);
+            }
         }
-};
-
-
-void enqueue(Node* &head, int data){
-    Node *newNode =  new Node(data);
-
-    if(head == NULL){
-        newNode->next = head;
-        head = newNode;
-        return;
     }
-
-    Node *temp = head;
-
-    while(temp->next != NULL){
-        temp = temp->next;
-    }
-
-    temp->next = newNode;
-}
-
-
-void dequeue(Node* &head){
-
-    if(head == NULL){
-        cout<<"Queue Underflow"<<endl;
-        return;
-    }
-
-    Node* temp = head;
-
-    head = head->next;
-
-    delete temp;
-}
-
-
-void display(Node* &head){
-
-    if(head == NULL){
-        cout<<"Queue is Empty!"<<endl;
-        return;
-    }
-
-    Node *temp = head;
-
-    while(temp != NULL){
-        cout<<temp->data<<"->";
-        temp = temp->next;
-    }
-
-    cout<<"NULL"<<endl;
 }
 
 int main(){
+    int n = 5;
 
-Node *head = NULL;
+    int arr[n] = {3,1,8,4,2};
 
-enqueue(head,10);
-enqueue(head,20);
-enqueue(head,30);
-enqueue(head,40);
-enqueue(head,50);
+    bubbleSort(arr,n);
 
-
-display(head);
-
-dequeue(head);
-
-display(head);
+    for(int i = 0; i < n; i++){
+        cout<<arr[i]<<" ";
+    }
 }
+
+
