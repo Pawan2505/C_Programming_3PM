@@ -3982,83 +3982,190 @@
 // }
 
 
+// #include<iostream>
+// using namespace std;
+
+
+// void merge(int arr[], int start, int end){
+
+//         int mid = (start+end)/2;
+
+//         int length1 = mid-start+1;
+
+//         int length2 = end-mid;
+
+//         int *firstArray = new int[length1];
+//         int *secondArray = new int[length2];
+
+//         int originalIndex = start;
+
+//         for(int i = 0; i < length1; i++){
+//             firstArray[i] = arr[originalIndex++];
+//         }
+
+//         for(int i = 0; i<length2; i++){
+//             secondArray[i] = arr[originalIndex++];
+//         }
+
+
+//         int index1 = 0;
+//         int index2 = 0;
+
+//         originalIndex = start;
+
+//         while(index1 < length1 && index2<length2){
+
+//             if(firstArray[index1] < secondArray[index2]){
+//                 arr[originalIndex++] = firstArray[index1++];
+//             }else{
+//                 arr[originalIndex++] = secondArray[index2++];
+//             }
+//         }
+
+//         while(index1<length1){
+//             arr[originalIndex++] = firstArray[index1++];
+//         }
+
+//         while(index2<length2){
+//             arr[originalIndex++] = secondArray[index2++];
+//         }
+// }
+
+
+// void mergeSort(int arr[], int start, int end){
+
+//     if(start>=end){
+//         return;
+//     }
+//         int mid = (start + end)/2;
+
+
+
+//         // left array
+
+//         mergeSort(arr,start,mid);
+
+//         // right array
+
+//         mergeSort(arr,mid+1, end);
+
+// // merge
+
+//     merge(arr,start,end);
+
+// }
+
+// int main(){
+//     int n = 10;
+
+//     int arr[n] = {12,34,5,67,8,23,56,34,4,82};
+
+//     mergeSort(arr,0,n-1);
+
+//     for(int i = 0; i < n; i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int fact(int num){
+
+//     // base condtion
+
+//     if(num == 1){
+//         return 1;
+//     }
+
+//     return num*fact(num-1);
+
+// }
+
+// int main(){
+
+//     int n = 5;
+
+//   int result =  fact(5);
+//   cout<<"Factorial of "<<n<<" is : "<<result<<endl;
+
+// }
+
+
 #include<iostream>
 using namespace std;
 
 
 void merge(int arr[], int start, int end){
 
-        int mid = (start+end)/2;
+    int mid = (start+end)/2; //(0+9)/2
 
-        int length1 = mid-start+1;
+    int length1 = mid-start+1; 
+    int length2 = end-mid; 
 
-        int length2 = end-mid;
+    int *firstArray = new int[length1];
 
-        int *firstArray = new int[length1];
-        int *secondArray = new int[length2];
+    int *secondArray = new int[length2];
 
-        int originalIndex = start;
+    int originalIndex = start;
 
-        for(int i = 0; i < length1; i++){
-            firstArray[i] = arr[originalIndex++];
-        }
+    for(int i = 0; i <length1; i++){
+        firstArray[i] = arr[originalIndex++];
+    }
 
-        for(int i = 0; i<length2; i++){
-            secondArray[i] = arr[originalIndex++];
-        }
+    for(int i = 0; i <length2; i++){
+        secondArray[i] =  arr[originalIndex++];
+    }
 
+    int index1 = 0;
+    int index2 = 0;
 
-        int index1 = 0;
-        int index2 = 0;
+    originalIndex = start;
 
-        originalIndex = start;
+    while(index1<length1 && index2 < length2){
 
-        while(index1 < length1 && index2<length2){
-
-            if(firstArray[index1] < secondArray[index2]){
-                arr[originalIndex++] = firstArray[index1++];
-            }else{
-                arr[originalIndex++] = secondArray[index2++];
-            }
-        }
-
-        while(index1<length1){
+        if(firstArray[index1] < secondArray[index2]){
             arr[originalIndex++] = firstArray[index1++];
+        }else{
+             arr[originalIndex++] = secondArray[index2++];
         }
+    }
 
-        while(index2<length2){
-            arr[originalIndex++] = secondArray[index2++];
-        }
+    while(index1 < length1){
+         arr[originalIndex++] = firstArray[index1++];
+    }
+
+    while(index2<length2){
+         arr[originalIndex++] = secondArray[index2++];
+    }
+
+
+
 }
-
 
 void mergeSort(int arr[], int start, int end){
 
-    if(start>=end){
+    if(start>=end){ // base condition
         return;
     }
-        int mid = (start + end)/2;
 
+    int mid = (start+end)/2; 
 
+    mergeSort(arr, start, mid);
 
-        // left array
+    mergeSort(arr,mid+1, end);
 
-        mergeSort(arr,start,mid);
-
-        // right array
-
-        mergeSort(arr,mid+1, end);
-
-// merge
-
-    merge(arr,start,end);
-
+    merge(arr, start,end);
 }
 
 int main(){
+
     int n = 10;
 
-    int arr[n] = {12,34,5,67,8,23,56,34,4,82};
+    int arr[n] = {12,34,45,3,25,67,89,23,56,22};
 
     mergeSort(arr,0,n-1);
 
