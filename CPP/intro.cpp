@@ -4095,81 +4095,154 @@
 // }
 
 
+// #include<iostream>
+// using namespace std;
+
+
+// void merge(int arr[], int start, int end){
+
+//     int mid = (start+end)/2; //(0+9)/2
+
+//     int length1 = mid-start+1; 
+//     int length2 = end-mid; 
+
+//     int *firstArray = new int[length1];
+
+//     int *secondArray = new int[length2];
+
+//     int originalIndex = start;
+
+//     for(int i = 0; i <length1; i++){
+//         firstArray[i] = arr[originalIndex++];
+//     }
+
+//     for(int i = 0; i <length2; i++){
+//         secondArray[i] =  arr[originalIndex++];
+//     }
+
+//     int index1 = 0;
+//     int index2 = 0;
+
+//     originalIndex = start;
+
+//     while(index1<length1 && index2 < length2){
+
+//         if(firstArray[index1] < secondArray[index2]){
+//             arr[originalIndex++] = firstArray[index1++];
+//         }else{
+//              arr[originalIndex++] = secondArray[index2++];
+//         }
+//     }
+
+//     while(index1 < length1){
+//          arr[originalIndex++] = firstArray[index1++];
+//     }
+
+//     while(index2<length2){
+//          arr[originalIndex++] = secondArray[index2++];
+//     }
+
+
+
+// }
+
+// void mergeSort(int arr[], int start, int end){
+
+//     if(start>=end){ // base condition
+//         return;
+//     }
+
+//     int mid = (start+end)/2; 
+
+//     mergeSort(arr, start, mid);
+
+//     mergeSort(arr,mid+1, end);
+
+//     merge(arr, start,end);
+// }
+
+// int main(){
+
+//     int n = 10;
+
+//     int arr[n] = {12,34,45,3,25,67,89,23,56,22};
+
+//     mergeSort(arr,0,n-1);
+
+//     for(int i = 0; i < n; i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+
+
+// Linear Search 
+
+
+// #include<iostream>
+
+// using namespace std;
+
+// int linearSearch(int arr[], int n, int key){
+
+//         for(int i = 0; i<n; i++){
+
+//             if(arr[i] == key){
+//                 return i;
+//             }
+//         }
+// }
+
+// int main(){
+
+//     int n = 10;
+
+//     int arr[n] = {12,34,65,8,97,23,45,2,14,45};
+
+//     int key = 97;
+
+//    int result = linearSearch(arr, n, key);
+
+//    cout<<result<<endl;
+
+// }
+
+
+
+// Binary Search
+
+
 #include<iostream>
 using namespace std;
 
+int binarySearch(int arr[], int start, int end, int key){
 
-void merge(int arr[], int start, int end){
+        int mid = (start+end)/2;
 
-    int mid = (start+end)/2; //(0+9)/2
-
-    int length1 = mid-start+1; 
-    int length2 = end-mid; 
-
-    int *firstArray = new int[length1];
-
-    int *secondArray = new int[length2];
-
-    int originalIndex = start;
-
-    for(int i = 0; i <length1; i++){
-        firstArray[i] = arr[originalIndex++];
-    }
-
-    for(int i = 0; i <length2; i++){
-        secondArray[i] =  arr[originalIndex++];
-    }
-
-    int index1 = 0;
-    int index2 = 0;
-
-    originalIndex = start;
-
-    while(index1<length1 && index2 < length2){
-
-        if(firstArray[index1] < secondArray[index2]){
-            arr[originalIndex++] = firstArray[index1++];
-        }else{
-             arr[originalIndex++] = secondArray[index2++];
+        if(arr[mid] == key){
+            return mid;
         }
-    }
 
-    while(index1 < length1){
-         arr[originalIndex++] = firstArray[index1++];
-    }
-
-    while(index2<length2){
-         arr[originalIndex++] = secondArray[index2++];
-    }
-
-
-
-}
-
-void mergeSort(int arr[], int start, int end){
-
-    if(start>=end){ // base condition
-        return;
-    }
-
-    int mid = (start+end)/2; 
-
-    mergeSort(arr, start, mid);
-
-    mergeSort(arr,mid+1, end);
-
-    merge(arr, start,end);
+        if(key < arr[mid]){
+            end = mid-1;
+            binarySearch(arr, start, end,key);
+        }
+        else{
+            start = mid+1;
+            binarySearch(arr, start, end,key);
+        }
 }
 
 int main(){
 
     int n = 10;
 
-    int arr[n] = {12,34,45,3,25,67,89,23,56,22};
+    int arr[n] = {10,20,30,40,50,60,70,80,90,100};
 
-    mergeSort(arr,0,n-1);
+    int key = 30;
 
-    for(int i = 0; i < n; i++){
-        cout<<arr[i]<<" ";
-    }
+   int result =  binarySearch(arr, 0, n-1, key);
+
+   cout<<result<<endl;
+
 }
